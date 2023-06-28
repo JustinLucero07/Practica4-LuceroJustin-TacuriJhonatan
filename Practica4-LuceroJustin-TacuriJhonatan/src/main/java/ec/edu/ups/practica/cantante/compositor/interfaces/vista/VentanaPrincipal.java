@@ -10,6 +10,7 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.dao.CantanteDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.dao.CompositorDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICantanteDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICompositorDao;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.AgregarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.AgregarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.ActualizarCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.BuscarCantante;
@@ -45,6 +46,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private EliminarCompositor eliminarCompositor;
     private ListarCompositor listarCompositor;
     private AgregarCancion agregarCancion;
+    private AgregarDisco agregarDisco;
     
     //Internacionalizacion 
     private Locale localizacion;
@@ -419,6 +421,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void itemCrearDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemCrearDiscoActionPerformed
         // TODO add your handling code here:
+        if(agregarDisco == null){
+            agregarDisco = new AgregarDisco(controladorCantante);
+            desktopPane.add(agregarDisco);
+        }
+        agregarDisco.setVisible(true); 
     }//GEN-LAST:event_itemCrearDiscoActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -462,7 +469,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             public void run() {
                 new VentanaPrincipal().setVisible(true);
             }
-        });
+        }
+        );
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

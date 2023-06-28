@@ -6,6 +6,7 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
+import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class AgregarDisco extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante ;
+    private Cantante cantanteTempo;
     /**
      * Creates new form AgregarDisco
      */
@@ -67,20 +69,24 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         jLabel2.setText("Ingrese el nombre del disco");
 
         txtNombre.setEditable(false);
+        txtNombre.setEnabled(false);
 
         jLabel3.setText("Nombre : ");
 
         jLabel4.setText("Apellido :");
 
         txtApellido.setEditable(false);
+        txtApellido.setEnabled(false);
 
         jLabel5.setText("Edad :");
 
         txtEdad.setEditable(false);
+        txtEdad.setEnabled(false);
 
         jLabel6.setText("Nombre artistico :");
 
         txtNombreArtistico.setEditable(false);
+        txtNombreArtistico.setEnabled(false);
 
         jLabel7.setText("Codigo :");
 
@@ -89,6 +95,11 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         jLabel9.setText("Año de lanzamiento :");
 
         txtCodigo.setEnabled(false);
+        txtCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCodigoActionPerformed(evt);
+            }
+        });
 
         txtNombreDisco.setEnabled(false);
 
@@ -101,6 +112,11 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
 
         bntAgregar.setText("Agregar");
         bntAgregar.setEnabled(false);
+        bntAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntAgregarActionPerformed(evt);
+            }
+        });
 
         bntCancelar.setText("Cancelar");
 
@@ -213,7 +229,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
@@ -228,22 +244,40 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         if (txtIdCantante.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
         }else{
-            Cantante cantante = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante.getText()));
-            if (cantante!=null) {
+            cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante.getText()));
+            if (cantanteTempo!=null) {
                 txtIdCantante.setEnabled(false);
-                this.mostrarDatos(cantante);
+                this.mostrarDatos(cantanteTempo);
+                bntBuscar.setEnabled(false);
+                bntAgregar.setEnabled(true);
+                txtNombreDisco.setEnabled(true);
+                txtCodigo.setEnabled(true);
+                txtAnioLanzamiento.setEnabled(true);
                 
             }else{
                 JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante.getText()+" en cantantes. ");
             }
         }
     }//GEN-LAST:event_bntBuscarActionPerformed
+
+    private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
+        String nombre =txtNombreDisco.getText();
+        int codigo = Integer.parseInt( txtCodigo.getText());
+        int anio = Integer.parseInt( txtAnioLanzamiento.getText());
+        Disco disco = new Disco(codigo, nombre, anio);
+        cantanteTempo.agregarDisco(disco);
+    }//GEN-LAST:event_bntAgregarActionPerformed
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
     public void mostrarDatos(Cantante cantante){
         txtIdCantante.setEnabled(false);
         bntBuscar.setEnabled(false);
         txtNombre.setText(cantante.getNombre());
         txtEdad.setText( String.valueOf(cantante.getEdad()));
         txtNombreArtistico.setText(cantante.getNombreArtistico());
+        txtApellido.setText(cantante.getApellido());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
