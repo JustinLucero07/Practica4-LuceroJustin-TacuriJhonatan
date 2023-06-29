@@ -70,6 +70,11 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
 
         txtNombre.setEditable(false);
         txtNombre.setEnabled(false);
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Nombre : ");
 
@@ -119,6 +124,11 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         });
 
         bntCancelar.setText("Cancelar");
+        bntCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -229,7 +239,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -261,16 +271,49 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_bntBuscarActionPerformed
 
     private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
-        String nombre =txtNombreDisco.getText();
+        
         int codigo = Integer.parseInt( txtCodigo.getText());
-        int anio = Integer.parseInt( txtAnioLanzamiento.getText());
-        Disco disco = new Disco(codigo, nombre, anio);
-        cantanteTempo.agregarDisco(disco);
+        if (cantanteTempo.buscarDisco(codigo)==null) {
+            String nombre =txtNombreDisco.getText();
+            int anio = Integer.parseInt( txtAnioLanzamiento.getText());
+            Disco disco = new Disco(codigo, nombre, anio);
+            cantanteTempo.agregarDisco(disco);
+            JOptionPane.showMessageDialog(this, "Se a creado existosamente");
+            txtNombreDisco.setText("");
+            txtCodigo.setText("");
+            txtAnioLanzamiento.setText("");
+        }else{
+            JOptionPane.showMessageDialog(this, "El id ya existe");
+        }
+        
     }//GEN-LAST:event_bntAgregarActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCodigoActionPerformed
+
+    private void bntCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCancelarActionPerformed
+        // TODO add your handling code here:
+        this.limpiarCampos();
+        this.setVisible(false);
+        bntAgregar.setEnabled(false);
+        bntBuscar.setEnabled(true);
+    }//GEN-LAST:event_bntCancelarActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+    public void limpiarCampos(){
+        txtIdCantante.setText("");
+        txtNombreDisco.setText("");
+        txtApellido.setText("");
+        txtCodigo.setText("");
+        txtEdad.setText("");
+        txtNombreArtistico.setText("");
+        txtNombreDisco.setText("");
+        txtAnioLanzamiento.setText("");
+        txtNombre.setText("");
+    }
     public void mostrarDatos(Cantante cantante){
         txtIdCantante.setEnabled(false);
         bntBuscar.setEnabled(false);
@@ -278,6 +321,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         txtEdad.setText( String.valueOf(cantante.getEdad()));
         txtNombreArtistico.setText(cantante.getNombreArtistico());
         txtApellido.setText(cantante.getApellido());
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

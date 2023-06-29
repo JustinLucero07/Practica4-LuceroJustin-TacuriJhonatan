@@ -181,6 +181,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(itemCrearDisco);
 
         itemActualizarDisco.setText("Actualizar");
+        itemActualizarDisco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemActualizarDiscoActionPerformed(evt);
+            }
+        });
         jMenu1.add(itemActualizarDisco);
 
         itemBuscarDisco.setText("Buscar");
@@ -318,10 +323,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -436,6 +438,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         localizacion = new Locale("en", "US");
     }//GEN-LAST:event_menuItemInglesActionPerformed
+
+    private void itemActualizarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarDiscoActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_itemActualizarDiscoActionPerformed
 
     /**
      * @param args the command line arguments

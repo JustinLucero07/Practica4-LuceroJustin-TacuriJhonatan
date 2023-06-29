@@ -25,8 +25,6 @@ public class ControladorCompositor {
         this.compositorDao = compositorDao;
     }
 
-    
-    
     public void crearCompositor(Compositor compositor){
         compositorDao.create(compositor);
     }
