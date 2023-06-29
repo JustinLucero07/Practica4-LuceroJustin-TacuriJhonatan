@@ -295,7 +295,6 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.limpiarCampos();
         this.setVisible(false);
-
         bntBuscar4.setEnabled(true);
         txtIdCantante4.setEnabled(true);
         bntBuscarDisco.setEnabled(false);
@@ -338,6 +337,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
                 txtAnioLanzamiento4.setText("");
                 txtNombreDisco4.setText("");
                 JOptionPane.showMessageDialog(this, "No se encuentra el disco el disco ");
+                bntEliminar.setEnabled(false);
             }
         }
     }//GEN-LAST:event_bntBuscarDiscoActionPerformed
@@ -346,7 +346,14 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         int num = JOptionPane.showConfirmDialog(this, "Esta seguro que desea elimnar el disco "+ disco.getNombre());
         if (num == JOptionPane.YES_OPTION) {
-            cantanteTempo.eliminarDisco(Integer.parseInt(txtIdCantante4.getText()));
+            cantanteTempo.eliminarDisco(Integer.parseInt(txtCodigo4.getText()));
+            bntEliminar.setEnabled(false);
+            bntBuscarDisco.setEnabled(true);
+            txtCodigo4.setEnabled(true);
+            System.out.println(cantanteTempo);
+            txtNombreDisco4.setText("");
+            txtAnioLanzamiento4.setText("");
+            txtCodigo4.setText("");
         }else{
             JOptionPane.showMessageDialog(this,"No se a eliminado correctamente ");
             txtNombreDisco4.setText("");

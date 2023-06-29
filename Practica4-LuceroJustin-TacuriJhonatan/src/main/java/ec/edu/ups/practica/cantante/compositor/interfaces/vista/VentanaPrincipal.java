@@ -13,6 +13,7 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICompositorDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.ActualizarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.AgregarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.BuscarDisco;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.EliminarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.ActualizarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.AgregarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.BuscarCancion;
@@ -61,6 +62,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private AgregarCliente agregarCliente;
     private BuscarDisco buscarDisco; 
     private BuscarPorTitulo buscarPorTitulo;
+    private EliminarDisco eliminarDisco; 
     //Internacionalizacion 
     private Locale localizacion;
     private ResourceBundle mensaje;
@@ -549,11 +551,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void itemEliminarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarDiscoActionPerformed
         // TODO add your handling code here:
         
-        if(eliminarCancion == null){
-            eliminarCancion = new EliminarCancion(controladorCompositor);
-            desktopPane.add(eliminarCancion);
+        if(eliminarDisco == null){
+            eliminarDisco = new EliminarDisco(controladorCantante);
+            desktopPane.add(eliminarDisco);
         }
-        eliminarCancion.setVisible(true);
+        eliminarDisco.setVisible(true);
     }//GEN-LAST:event_itemEliminarDiscoActionPerformed
 
     private void menuItemBuscarPorTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemBuscarPorTituloActionPerformed
