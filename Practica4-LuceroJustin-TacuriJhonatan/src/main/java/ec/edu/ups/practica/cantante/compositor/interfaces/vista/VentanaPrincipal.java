@@ -462,7 +462,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void itemActualizarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarDiscoActionPerformed
         // TODO add your handling code here:
-        
+        if(agregarDisco == null){
+            agregarDisco = new AgregarDisco(controladorCantante);
+            desktopPane.add(agregarDisco);
+        }
+        agregarDisco.setVisible(true); 
     }//GEN-LAST:event_itemActualizarDiscoActionPerformed
 
     private void itemBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarCancionActionPerformed
