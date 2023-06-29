@@ -45,7 +45,7 @@ public class ControladorCompositor {
         return compositorDao.read(codigo);
     }
     
-    public Compositor buscarPorCancion(String nombre){
+    public Compositor buscarPorTituloCancion(String nombre){
         return compositorDao.buscarPorTituloDeCancion(nombre);
     }
     

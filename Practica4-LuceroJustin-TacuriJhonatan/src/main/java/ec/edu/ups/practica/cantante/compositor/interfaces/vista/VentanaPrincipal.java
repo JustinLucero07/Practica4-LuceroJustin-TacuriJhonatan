@@ -25,6 +25,7 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.ListarC
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.ActualizarCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.AgregarCliente;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.BuscarCompositor;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.BuscarPorTitulo;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.CrearCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.EliminarCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.ListarCompositor;
@@ -59,6 +60,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private ActualizarDisco actualizarDisco;
     private AgregarCliente agregarCliente;
     private BuscarDisco buscarDisco; 
+    private BuscarPorTitulo buscarPorTitulo;
     //Internacionalizacion 
     private Locale localizacion;
     private ResourceBundle mensaje;
@@ -116,6 +118,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         itemEliminarCompositor = new javax.swing.JMenuItem();
         itemListarCompositor = new javax.swing.JMenuItem();
         menuItemAgregarCliemt = new javax.swing.JMenuItem();
+        menuItemBuscarPorTitulo = new javax.swing.JMenuItem();
         opcCancion = new javax.swing.JMenu();
         itemCrearCancion = new javax.swing.JMenuItem();
         itemActualizarCancion = new javax.swing.JMenuItem();
@@ -277,6 +280,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         editMenu.add(menuItemAgregarCliemt);
+
+        menuItemBuscarPorTitulo.setText("Buscar Por Titulo");
+        menuItemBuscarPorTitulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemBuscarPorTituloActionPerformed(evt);
+            }
+        });
+        editMenu.add(menuItemBuscarPorTitulo);
 
         opcCancion.setText("Cancion");
 
@@ -545,6 +556,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eliminarCancion.setVisible(true);
     }//GEN-LAST:event_itemEliminarDiscoActionPerformed
 
+    private void menuItemBuscarPorTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemBuscarPorTituloActionPerformed
+        if(buscarPorTitulo == null){
+            buscarPorTitulo = new BuscarPorTitulo(controladorCompositor);
+            desktopPane.add(buscarPorTitulo);
+        }
+        buscarPorTitulo.setVisible(true);
+    }//GEN-LAST:event_menuItemBuscarPorTituloActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -613,6 +632,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenu menuCantante;
     private javax.swing.JMenuItem menuItemAgregarCliemt;
+    private javax.swing.JMenuItem menuItemBuscarPorTitulo;
     private javax.swing.JMenuItem menuItemIngles;
     private javax.swing.JMenu opcCancion;
     // End of variables declaration//GEN-END:variables
