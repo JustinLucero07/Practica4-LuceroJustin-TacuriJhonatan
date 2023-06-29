@@ -207,6 +207,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(itemBuscarDisco);
 
         itemEliminarDisco.setText("Eliminar");
+        itemEliminarDisco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEliminarDiscoActionPerformed(evt);
+            }
+        });
         jMenu1.add(itemEliminarDisco);
 
         menuCantante.add(jMenu1);
@@ -529,6 +534,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
         buscarDisco.setVisible(true);
     }//GEN-LAST:event_itemBuscarDiscoActionPerformed
+
+    private void itemEliminarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarDiscoActionPerformed
+        // TODO add your handling code here:
+        
+        if(eliminarCancion == null){
+            eliminarCancion = new EliminarCancion(controladorCompositor);
+            desktopPane.add(eliminarCancion);
+        }
+        eliminarCancion.setVisible(true);
+    }//GEN-LAST:event_itemEliminarDiscoActionPerformed
 
     /**
      * @param args the command line arguments
