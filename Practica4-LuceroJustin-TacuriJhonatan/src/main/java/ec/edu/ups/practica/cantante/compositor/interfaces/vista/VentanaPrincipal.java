@@ -11,7 +11,10 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.dao.CompositorDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICantanteDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICompositorDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.AgregarDisco;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.ActualizarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.AgregarCancion;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.BuscarCancion;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.EliminarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.ActualizarCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.BuscarCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.EliminarCantante;
@@ -47,6 +50,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private ListarCompositor listarCompositor;
     private AgregarCancion agregarCancion;
     private AgregarDisco agregarDisco;
+    private BuscarCancion buscarCacion;
+    private ActualizarCancion actualizarCancion;
+    private EliminarCancion eliminarCancion;
     
     //Internacionalizacion 
     private Locale localizacion;
@@ -259,12 +265,27 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         opcCancion.add(itemCrearCancion);
 
         itemActualizarCancion.setText("Actualizar");
+        itemActualizarCancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemActualizarCancionActionPerformed(evt);
+            }
+        });
         opcCancion.add(itemActualizarCancion);
 
         itemBuscarCancion.setText("Buscar");
+        itemBuscarCancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemBuscarCancionActionPerformed(evt);
+            }
+        });
         opcCancion.add(itemBuscarCancion);
 
         itemEliminarCancion.setText("Eliminar");
+        itemEliminarCancion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemEliminarCancionActionPerformed(evt);
+            }
+        });
         opcCancion.add(itemEliminarCancion);
 
         itemListarCancion.setText("Listar");
@@ -443,6 +464,30 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_itemActualizarDiscoActionPerformed
+
+    private void itemBuscarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarCancionActionPerformed
+        if(buscarCacion == null){
+            buscarCacion = new BuscarCancion(controladorCompositor);
+            desktopPane.add(buscarCacion);
+        }
+        buscarCacion.setVisible(true);
+    }//GEN-LAST:event_itemBuscarCancionActionPerformed
+
+    private void itemActualizarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemActualizarCancionActionPerformed
+        if(actualizarCancion == null){
+            actualizarCancion = new ActualizarCancion(controladorCompositor);
+            desktopPane.add(actualizarCancion);
+        }
+        actualizarCancion.setVisible(true);
+    }//GEN-LAST:event_itemActualizarCancionActionPerformed
+
+    private void itemEliminarCancionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemEliminarCancionActionPerformed
+        if(eliminarCancion == null){
+            eliminarCancion = new EliminarCancion(controladorCompositor);
+            desktopPane.add(eliminarCancion);
+        }
+        eliminarCancion.setVisible(true);
+    }//GEN-LAST:event_itemEliminarCancionActionPerformed
 
     /**
      * @param args the command line arguments

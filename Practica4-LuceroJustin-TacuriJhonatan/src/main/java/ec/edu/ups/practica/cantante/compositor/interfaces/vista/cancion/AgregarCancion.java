@@ -61,6 +61,8 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         btnAgregar = new javax.swing.JButton();
         btnCancelarAgregar = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("AGREGAR CANCION"));
 
         jLabel1.setText("Codigo:");
