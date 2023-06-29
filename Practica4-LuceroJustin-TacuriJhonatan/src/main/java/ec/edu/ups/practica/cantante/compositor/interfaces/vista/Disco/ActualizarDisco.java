@@ -346,6 +346,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
             txtAnioLanzamiento4.setEnabled(false);
             txtCodigo4.setEnabled(true);
             bntActualizar.setEnabled(false);
+            System.out.println(cantanteTempo);
         }
     }//GEN-LAST:event_bntActualizarActionPerformed
     

@@ -284,6 +284,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
                 txtNombreDisco.setText("");
                 txtCodigo.setText("");
                 txtAnioLanzamiento.setText("");
+                System.out.println(cantanteTempo);
         }else{
             JOptionPane.showMessageDialog(this, "El id ya existe");
         }
