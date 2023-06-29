@@ -414,6 +414,8 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
                 controladorCompositor.agregarCancion(cancion, controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())));
                 System.out.println(controladorCompositor.verCompositores());
                 JOptionPane.showMessageDialog(this, "Se agrego exitosamnete la cacion");
+                this.limpiarCampos();
+                this.limpiarCamposCancion();
             }else{
                 JOptionPane.showMessageDialog(this, "El Codigo de la Cancion ya existe");
             }
