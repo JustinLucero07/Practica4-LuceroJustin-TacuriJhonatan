@@ -311,6 +311,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                 //txtNombreDisco4.setEnabled(true);
                 //txtCodigo4.setEnabled(true);
                 //txtAnioLanzamiento4.setEnabled(true);
+                txtCodigo4.setEnabled(true);
 
             }else{
                 JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante4.getText()+" en cantantes. ");
@@ -331,13 +332,26 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtAnioLanzamiento4ActionPerformed
 
     private void bntActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntActualizarActionPerformed
-        cantanteTempo.actualizarDisco(disco);
-        JOptionPane.showMessageDialog(this, "Se actualizado correctamente");
+        
+        if (txtAnioLanzamiento4.getText().isEmpty()||txtNombreDisco4.getText().isEmpty()||txtCodigo4.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No se a llenado todos los campos correctamente");
+        }else{
+            Disco disquito = new Disco(Integer.parseInt(txtCodigo4.getText()), txtNombreDisco4.getText(), Integer.parseInt(txtAnioLanzamiento4.getText()));
+            cantanteTempo.actualizarDisco(disquito);
+            JOptionPane.showMessageDialog(this, "Se actualizado correctamente");
+            txtNombreDisco4.setText("");
+            txtAnioLanzamiento4.setText("");
+            txtCodigo4.setText("");
+            txtNombreDisco4.setEnabled(false);
+            txtAnioLanzamiento4.setEnabled(false);
+            txtCodigo4.setEnabled(true);
+            bntActualizar.setEnabled(false);
+        }
     }//GEN-LAST:event_bntActualizarActionPerformed
     
     public void limpiarCampos(){
         txtIdCantante4.setText("");
-        txtNombreDisco4.setText("");
+        
         txtApellido4.setText("");
         txtCodigo4.setText("");
         txtEdad4.setText("");
@@ -362,6 +376,9 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         this.setVisible(false);
         bntActualizar.setEnabled(false);
         bntBuscar4.setEnabled(true);
+        txtIdCantante4.setEnabled(true);
+        bntBuscarDisco.setEnabled(false);
+        txtCodigo4.setEnabled(false);
     }//GEN-LAST:event_bntCancelar4ActionPerformed
 
     private void bntBuscarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarDiscoActionPerformed
@@ -371,11 +388,14 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         }else {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
-                txtAnioLanzamiento4.setEditable(true);
-                txtNombreDisco4.setEditable(true);
-                txtNombreDisco4.setText(disco.getNombre());
+                txtCodigo4.setEnabled(false);
                 txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioDeLanzamiento()));
                 bntActualizar.setEnabled(true);
+                txtAnioLanzamiento4.setEnabled(true);
+                txtNombreDisco4.setEnabled(true);
+                txtNombreDisco4.setText(disco.getNombre());
+            }else{
+                JOptionPane.showMessageDialog(this, "Nose el disco ");
             }
         }
     }//GEN-LAST:event_bntBuscarDiscoActionPerformed

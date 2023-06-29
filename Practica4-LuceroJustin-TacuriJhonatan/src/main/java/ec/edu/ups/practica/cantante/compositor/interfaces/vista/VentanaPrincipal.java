@@ -107,7 +107,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         itemActualizarDisco = new javax.swing.JMenuItem();
         itemBuscarDisco = new javax.swing.JMenuItem();
         itemEliminarDisco = new javax.swing.JMenuItem();
-        itemListarDisco = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         itemCrearCompositor = new javax.swing.JMenuItem();
         itemActualizarCompositor = new javax.swing.JMenuItem();
@@ -120,7 +119,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         itemActualizarCancion = new javax.swing.JMenuItem();
         itemBuscarCancion = new javax.swing.JMenuItem();
         itemEliminarCancion = new javax.swing.JMenuItem();
-        itemListarCancion = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         itemSalirMenu = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
@@ -203,9 +201,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         itemEliminarDisco.setText("Eliminar");
         jMenu1.add(itemEliminarDisco);
-
-        itemListarDisco.setText("Listar");
-        jMenu1.add(itemListarDisco);
 
         menuCantante.add(jMenu1);
 
@@ -304,9 +299,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
         opcCancion.add(itemEliminarCancion);
-
-        itemListarCancion.setText("Listar");
-        opcCancion.add(itemListarCancion);
 
         editMenu.add(opcCancion);
 
@@ -579,10 +571,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemEliminarCantante;
     private javax.swing.JMenuItem itemEliminarCompositor;
     private javax.swing.JMenuItem itemEliminarDisco;
-    private javax.swing.JMenuItem itemListarCancion;
     private javax.swing.JMenuItem itemListarCantante;
     private javax.swing.JMenuItem itemListarCompositor;
-    private javax.swing.JMenuItem itemListarDisco;
     private javax.swing.JMenuItem itemSalirMenu;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;

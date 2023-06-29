@@ -271,21 +271,23 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_bntBuscarActionPerformed
 
     private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
-        
-        int codigo = Integer.parseInt( txtCodigo.getText());
-        if (cantanteTempo.buscarDisco(codigo)==null) {
-            String nombre =txtNombreDisco.getText();
-            int anio = Integer.parseInt( txtAnioLanzamiento.getText());
-            Disco disco = new Disco(codigo, nombre, anio);
-            cantanteTempo.agregarDisco(disco);
-            JOptionPane.showMessageDialog(this, "Se a creado existosamente");
-            txtNombreDisco.setText("");
-            txtCodigo.setText("");
-            txtAnioLanzamiento.setText("");
+        if (txtAnioLanzamiento.getText().isEmpty()||txtNombreDisco.getText().isEmpty()||txtCodigo.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No se a llenado todos los campos correctamente");
+        }else{
+            int codigo = Integer.parseInt( txtCodigo.getText());
+            if (cantanteTempo.buscarDisco(codigo)==null) {
+                String nombre =txtNombreDisco.getText();
+                int anio = Integer.parseInt( txtAnioLanzamiento.getText());
+                Disco disco = new Disco(codigo, nombre, anio);
+                cantanteTempo.agregarDisco(disco);
+                JOptionPane.showMessageDialog(this, "Se a creado existosamente");
+                txtNombreDisco.setText("");
+                txtCodigo.setText("");
+                txtAnioLanzamiento.setText("");
         }else{
             JOptionPane.showMessageDialog(this, "El id ya existe");
         }
-        
+        }
     }//GEN-LAST:event_bntAgregarActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
@@ -298,6 +300,10 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         this.setVisible(false);
         bntAgregar.setEnabled(false);
         bntBuscar.setEnabled(true);
+        txtIdCantante.setEnabled(true);
+        txtNombreDisco.setEnabled(false);
+        txtAnioLanzamiento.setEnabled(false);
+        txtCodigo.setEnabled(false);
     }//GEN-LAST:event_bntCancelarActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed

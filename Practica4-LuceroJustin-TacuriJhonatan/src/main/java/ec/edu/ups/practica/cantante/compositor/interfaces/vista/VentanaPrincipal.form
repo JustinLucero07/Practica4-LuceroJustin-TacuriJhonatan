@@ -94,11 +94,6 @@
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="itemListarDisco">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Listar"/>
-                  </Properties>
-                </MenuItem>
               </SubComponents>
             </Menu>
           </SubComponents>
@@ -200,11 +195,6 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itemEliminarCancionActionPerformed"/>
                   </Events>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="itemListarCancion">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Listar"/>
-                  </Properties>
                 </MenuItem>
               </SubComponents>
             </Menu>
