@@ -461,7 +461,6 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
                 txtApellido.setText(compositorTempo.getApellido());
                 txtEdad.setText( String.valueOf(compositorTempo.getEdad()));
                 txtNacionalidad.setText(compositorTempo.getNacionalidad());
-                txtNacionalidad.setText(compositorTempo.getNacionalidad());
                 txtSalario.setText(String.valueOf(compositorTempo.calcularSalario()));
                 txtNumeroComposiciones.setText(String.valueOf(compositorTempo.getNumeroDeComposiciones()));
 
@@ -484,12 +483,11 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
         }else{
             Cantante cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()));
             if (cantanteTempo !=null) {
-                txtNombre.setText(cantanteTempo.getNombre());
-                txtApellido.setText(cantanteTempo.getApellido());
-                txtEdad.setText( String.valueOf(cantanteTempo.getEdad()));
-                txtNacionalidad.setText(cantanteTempo.getNacionalidad());
-                txtNacionalidad.setText(cantanteTempo.getNacionalidad());
-                txtSalario.setText(String.valueOf(cantanteTempo.calcularSalario()));
+                txtNombre1.setText(cantanteTempo.getNombre());
+                txtApellido1.setText(cantanteTempo.getApellido());
+                txtEdad1.setText( String.valueOf(cantanteTempo.getEdad()));
+                txtNacionalidad1.setText(cantanteTempo.getNacionalidad());
+                txtSalario1.setText(String.valueOf(cantanteTempo.calcularSalario()));
                 txtNombreArtistico.setText(cantanteTempo.getNombreArtistico());
                 txtGeneroMusical.setText(cantanteTempo.getGeneroMusical());
                 txtNumeroSencillos.setText(String.valueOf(cantanteTempo.getNumeroDeSencillos()));
@@ -517,7 +515,9 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
         }else{
             controladorCompositor.agregarClienteCan(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())), controladorCantante.buscarCantante(Integer.parseInt(txtID.getText()))); 
             JOptionPane.showMessageDialog(this, "Se agrego exitosamente el cantante como cliente de compositor");
-            controladorCompositor.verCompositores();
+            System.out.println(controladorCompositor.verCompositores());
+            this.limpiarCampos();
+            this.limpiarCamposCantante();
         }
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
 
@@ -534,11 +534,11 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
     
     private void limpiarCamposCantante(){
         
-        txtNombre.setText("");
-        txtApellido.setText("");
-        txtEdad.setText("");
-        txtNacionalidad.setText("");
-        txtSalario.setText("");
+        txtNombre1.setText("");
+        txtApellido1.setText("");
+        txtEdad1.setText("");
+        txtNacionalidad1.setText("");
+        txtSalario1.setText("");
         txtNombreArtistico.setText("");
         txtNumeroConciertos.setText("");
         txtNumeroSencillos.setText("");
