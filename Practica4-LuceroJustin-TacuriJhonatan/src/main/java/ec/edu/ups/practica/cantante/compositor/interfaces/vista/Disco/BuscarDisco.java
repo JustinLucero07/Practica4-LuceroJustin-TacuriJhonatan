@@ -21,8 +21,9 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     /**
      * Creates new form BuscarDisco
      */
-    public BuscarDisco() {
+    public BuscarDisco(ControladorCantante controladorCantante) {
         initComponents();
+        this.controladorCantante = controladorCantante;
     }
 
     /**
@@ -317,10 +318,12 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
         }else {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
-                txtCodigo4.setEnabled(false);
+                
                 txtAnioLanzamiento4.setText(String.valueOf(disco.getAnioDeLanzamiento()));
                 txtNombreDisco4.setText(disco.getNombre());
             }else{
+                txtAnioLanzamiento4.setText("");
+                txtNombreDisco4.setText("");
                 JOptionPane.showMessageDialog(this, "No se encuentra el disco el disco ");
             }
         }

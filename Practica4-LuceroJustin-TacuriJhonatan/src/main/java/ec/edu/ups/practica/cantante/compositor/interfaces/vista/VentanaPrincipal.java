@@ -12,6 +12,7 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICantanteDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.idao.ICompositorDao;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.ActualizarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.AgregarDisco;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco.BuscarDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.ActualizarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.AgregarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.BuscarCancion;
@@ -57,6 +58,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private EliminarCancion eliminarCancion;
     private ActualizarDisco actualizarDisco;
     private AgregarCliente agregarCliente;
+    private BuscarDisco buscarDisco; 
     //Internacionalizacion 
     private Locale localizacion;
     private ResourceBundle mensaje;
@@ -197,6 +199,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jMenu1.add(itemActualizarDisco);
 
         itemBuscarDisco.setText("Buscar");
+        itemBuscarDisco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemBuscarDiscoActionPerformed(evt);
+            }
+        });
         jMenu1.add(itemBuscarDisco);
 
         itemEliminarDisco.setText("Eliminar");
@@ -513,6 +520,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         }
         agregarCliente.setVisible(true);
     }//GEN-LAST:event_menuItemAgregarCliemtActionPerformed
+
+    private void itemBuscarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemBuscarDiscoActionPerformed
+        // TODO add your handling code here:
+        if(buscarDisco == null){
+            buscarDisco = new BuscarDisco(controladorCantante);
+            desktopPane.add(buscarDisco);
+        }
+        buscarDisco.setVisible(true);
+    }//GEN-LAST:event_itemBuscarDiscoActionPerformed
 
     /**
      * @param args the command line arguments
