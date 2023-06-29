@@ -58,7 +58,6 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         txtSalario = new javax.swing.JTextField();
         txtNumeroComposiciones = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
         btnCancelarAgregar = new javax.swing.JButton();
 
@@ -219,13 +218,6 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
             }
         });
 
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -249,15 +241,13 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
                             .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addGap(102, 102, 102)
-                            .addComponent(btnAceptar)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCancelar))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                            .addComponent(jLabel11)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(btnAceptar))
                             .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -292,11 +282,9 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAceptar)
-                    .addComponent(btnCancelar))
-                .addGap(14, 14, 14))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAceptar)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         btnAgregar.setText("Agregar");
@@ -307,6 +295,11 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         });
 
         btnCancelarAgregar.setText("Cancelar");
+        btnCancelarAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarAgregarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -407,22 +400,33 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnAceptarActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        txtId.setText("");
-        this.limpiarCampos();
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        int codigo = Integer.parseInt(txtCodigoCancion.getText());
-        String titulo = txtTitulo.getText();
-        String letra = txtLetra.getText();
-        double tiempo = Double.parseDouble(txtDuracionCancion.getText());
+        if(this.validacionDeCampos()){
+            int codigo = Integer.parseInt(txtCodigoCancion.getText());
+            if (controladorCompositor.buscarCancion(controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())),codigo)==null) {
+                String titulo = txtTitulo.getText();
+                String letra = txtLetra.getText();
+                double tiempo = Double.parseDouble(txtDuracionCancion.getText());
         
-        Cancion cancion = new Cancion(codigo, titulo, letra, tiempo);
-        controladorCompositor.agregarCancion(cancion, controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())));
-        System.out.println(controladorCompositor.verCompositores());
+                Cancion cancion = new Cancion(codigo, titulo, letra, tiempo);
+                controladorCompositor.agregarCancion(cancion, controladorCompositor.buscarCompositor(Integer.parseInt(txtId.getText())));
+                System.out.println(controladorCompositor.verCompositores());
+                JOptionPane.showMessageDialog(this, "Se agrego exitosamnete la cacion");
+            }else{
+                JOptionPane.showMessageDialog(this, "El Codigo de la Cancion ya existe");
+            }
+                
+        }else{
+            JOptionPane.showMessageDialog(this, "No estan llenos todos los campos");
+        }
+        
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnCancelarAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarAgregarActionPerformed
+        this.limpiarCampos();
+        this.limpiarCamposCancion();
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCancelarAgregarActionPerformed
 
     private void limpiarCampos(){
         txtId.setText("");
@@ -434,10 +438,22 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         txtNumeroComposiciones.setText("");
     }
     
+    private void limpiarCamposCancion(){
+        txtCodigoCancion.setText("");
+        txtDuracionCancion.setText("");
+        txtLetra.setText("");
+        txtTitulo.setText("");
+    }
+    
+    private boolean validacionDeCampos(){
+        if (txtCodigoCancion.getText().isEmpty()||txtDuracionCancion.getText().isEmpty()||txtLetra.getText().isEmpty()||txtTitulo.getText().isEmpty()||txtNacionalidad.getText().isEmpty()) {
+            return false;
+        }
+        return true;
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelarAgregar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

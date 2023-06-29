@@ -249,7 +249,7 @@ public class CrearCompositor extends javax.swing.JInternalFrame {
                 String nacionalidad = txtNacionalidad.getText();
                 double salario = Double.parseDouble(txtSalario.getText());
                 int numeroComposiciones = Integer.parseInt(txtNumeroComposiciones.getText());
-                Compositor compositor = new Compositor(numeroComposiciones, edad, nombre, apellido, edad, nacionalidad, salario);
+                Compositor compositor = new Compositor(numeroComposiciones, id, nombre, apellido, edad, nacionalidad, salario);
                 //Disco disco = new Disco(12, "La noche", 2000);
                 //cantante.agregarDisco(disco);
                 controladorCompositor.crearCompositor(compositor); 
