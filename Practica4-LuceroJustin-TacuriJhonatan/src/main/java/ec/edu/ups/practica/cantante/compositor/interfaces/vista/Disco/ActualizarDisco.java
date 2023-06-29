@@ -375,6 +375,8 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.limpiarCampos();
         this.setVisible(false);
+        txtNombreDisco4.setEnabled(false);
+        txtAnioLanzamiento4.setEnabled(false);
         bntActualizar.setEnabled(false);
         bntBuscar4.setEnabled(true);
         txtIdCantante4.setEnabled(true);
