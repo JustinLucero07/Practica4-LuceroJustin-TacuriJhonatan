@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class EliminarCancion extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
     
     /**
      * Creates new form EliminarCancion
@@ -24,6 +27,22 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
         this.controladorCompositor = controladorCompositor;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblCodigoEliminarCancion.setText(mensajes.getString("ventana.codigo"));
+        jblTituloEliminarCancion.setText(mensajes.getString("ventanaCancion.titulo"));
+        jblLetraEliminarCancion.setText(mensajes.getString("ventanaCancion.letra"));
+        jblDuracionCancion.setText(mensajes.getString("ventanaCancion.duracioncancion"));
+        jblIdEliminarCancion.setText(mensajes.getString("ventana.id"));
+        jblNombreEliminarCancion.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoEliminarCancion.setText(mensajes.getString("ventana.apellido"));
+        jblEdadEliminarCancion.setText(mensajes.getString("ventana.edad"));
+        jblNacionalidadEliminarCancion.setText(mensajes.getString("ventana.nacionalidad"));
+        jblSalarioEliminarCancion.setText(mensajes.getString("ventana.salario"));
+        jblNumeroComposicionesEliminarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -52,7 +71,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jblCodigoEliminarCancion = new javax.swing.JLabel();
         jblTituloEliminarCancion = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jblLetraEliminarCancion = new javax.swing.JLabel();
         jblDuracionCancion = new javax.swing.JLabel();
         txtCodigoCancion = new javax.swing.JTextField();
         txtTitulo = new javax.swing.JTextField();
@@ -147,7 +166,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
 
         jblTituloEliminarCancion.setText("Titulo:");
 
-        jLabel3.setText("Letra:");
+        jblLetraEliminarCancion.setText("Letra:");
 
         jblDuracionCancion.setText("Duración de la Canción: ");
 
@@ -224,7 +243,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
                         .addGap(3, 3, 3)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(jblLetraEliminarCancion)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -247,7 +266,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jblCodigoEliminarCancion)
                             .addComponent(txtCodigoCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
+                            .addComponent(jblLetraEliminarCancion)
                             .addComponent(btnBuscarCancion)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -490,7 +509,6 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnBuscarCancion;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnEliminarCancion;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel jblApellidoEliminarCancion;
@@ -498,6 +516,7 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblDuracionCancion;
     private javax.swing.JLabel jblEdadEliminarCancion;
     private javax.swing.JLabel jblIdEliminarCancion;
+    private javax.swing.JLabel jblLetraEliminarCancion;
     private javax.swing.JLabel jblNacionalidadEliminarCancion;
     private javax.swing.JLabel jblNombreEliminarCancion;
     private javax.swing.JLabel jblNumeroComposicionesEliminarCancion;

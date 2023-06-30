@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class ActualizarCancion extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
     
     /**
      * Creates new form ActualizarCancion
@@ -24,6 +27,22 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
         this.controladorCompositor = controladorCompositor;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblCodigoActualizarCancion.setText(mensajes.getString("ventana.codigo"));
+        jblTituloActualizarCancion.setText(mensajes.getString("ventanaCancion.titulo"));
+        jblLetraActualizarCancion.setText(mensajes.getString("ventanaCancion.letra"));
+        jblDuracionCancionActualizarCancion.setText(mensajes.getString("ventanaCancion.duracioncancion"));
+        jblIdActualizarCancion.setText(mensajes.getString("ventana.id"));
+        jblNombreActualizarCancion.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoActualizarCancion.setText(mensajes.getString("ventana.apellido"));
+        jblEdadActualizarCancion.setText(mensajes.getString("ventana.edad"));
+        jblNacionalidadActualizarCancion.setText(mensajes.getString("ventana.nacionalidad"));
+        jblSalarioActualizarCancion.setText(mensajes.getString("ventana.salario"));
+        jblNumeroComposicionesActualizarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,13 +53,13 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jblIdActualizarDisco = new javax.swing.JLabel();
-        jblNombreActualizarDisco = new javax.swing.JLabel();
-        jblApellidoActualizarDisco = new javax.swing.JLabel();
-        jblEdadActualizarDisco = new javax.swing.JLabel();
-        jblNacionalidadActualizarDisco = new javax.swing.JLabel();
-        jblSalarioActualizarDisco = new javax.swing.JLabel();
-        jblNumeroComposicionesActualizarDisco = new javax.swing.JLabel();
+        jblIdActualizarCancion = new javax.swing.JLabel();
+        jblNombreActualizarCancion = new javax.swing.JLabel();
+        jblApellidoActualizarCancion = new javax.swing.JLabel();
+        jblEdadActualizarCancion = new javax.swing.JLabel();
+        jblNacionalidadActualizarCancion = new javax.swing.JLabel();
+        jblSalarioActualizarCancion = new javax.swing.JLabel();
+        jblNumeroComposicionesActualizarCancion = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
@@ -50,10 +69,10 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
         txtNumeroComposiciones = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jblCodigoActualizarDisco = new javax.swing.JLabel();
-        jblTituloActualizarDisco = new javax.swing.JLabel();
-        jblLetraActualizarDisco = new javax.swing.JLabel();
-        jblDuracionCancionActualizarDisco = new javax.swing.JLabel();
+        jblCodigoActualizarCancion = new javax.swing.JLabel();
+        jblTituloActualizarCancion = new javax.swing.JLabel();
+        jblLetraActualizarCancion = new javax.swing.JLabel();
+        jblDuracionCancionActualizarCancion = new javax.swing.JLabel();
         txtCodigoCancion = new javax.swing.JTextField();
         txtTitulo = new javax.swing.JTextField();
         txtLetra = new javax.swing.JTextField();
@@ -67,19 +86,19 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR COMPOSITOR"));
 
-        jblIdActualizarDisco.setText("ID:");
+        jblIdActualizarCancion.setText("ID:");
 
-        jblNombreActualizarDisco.setText("Nombre:");
+        jblNombreActualizarCancion.setText("Nombre:");
 
-        jblApellidoActualizarDisco.setText("Apellido:");
+        jblApellidoActualizarCancion.setText("Apellido:");
 
-        jblEdadActualizarDisco.setText("Edad:");
+        jblEdadActualizarCancion.setText("Edad:");
 
-        jblNacionalidadActualizarDisco.setText("Nacionalidad:");
+        jblNacionalidadActualizarCancion.setText("Nacionalidad:");
 
-        jblSalarioActualizarDisco.setText("Salario:");
+        jblSalarioActualizarCancion.setText("Salario:");
 
-        jblNumeroComposicionesActualizarDisco.setText("Numero de Composiciones:");
+        jblNumeroComposicionesActualizarCancion.setText("Numero de Composiciones:");
 
         txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,10 +168,10 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jblIdActualizarDisco)
-                    .addComponent(jblNombreActualizarDisco)
-                    .addComponent(jblEdadActualizarDisco)
-                    .addComponent(jblSalarioActualizarDisco))
+                    .addComponent(jblIdActualizarCancion)
+                    .addComponent(jblNombreActualizarCancion)
+                    .addComponent(jblEdadActualizarCancion)
+                    .addComponent(jblSalarioActualizarCancion))
                 .addGap(107, 107, 107)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,13 +182,13 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnAceptar)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jblNumeroComposicionesActualizarDisco)
+                        .addComponent(jblNumeroComposicionesActualizarCancion)
                         .addGap(18, 18, 18)
                         .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblApellidoActualizarDisco)
-                            .addComponent(jblNacionalidadActualizarDisco))
+                            .addComponent(jblApellidoActualizarCancion)
+                            .addComponent(jblNacionalidadActualizarCancion))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -181,40 +200,40 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblIdActualizarDisco)
+                    .addComponent(jblIdActualizarCancion)
                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAceptar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblNombreActualizarDisco)
+                    .addComponent(jblNombreActualizarCancion)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblApellidoActualizarDisco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jblApellidoActualizarCancion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblEdadActualizarDisco)
+                    .addComponent(jblEdadActualizarCancion)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblNacionalidadActualizarDisco)
+                    .addComponent(jblNacionalidadActualizarCancion)
                     .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jblSalarioActualizarDisco)
+                    .addComponent(jblSalarioActualizarCancion)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jblNumeroComposicionesActualizarDisco)
+                        .addComponent(jblNumeroComposicionesActualizarCancion)
                         .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("ACTUALIZAR CANCION"));
 
-        jblCodigoActualizarDisco.setText("Codigo:");
+        jblCodigoActualizarCancion.setText("Codigo:");
 
-        jblTituloActualizarDisco.setText("Titulo:");
+        jblTituloActualizarCancion.setText("Titulo:");
 
-        jblLetraActualizarDisco.setText("Letra:");
+        jblLetraActualizarCancion.setText("Letra:");
 
-        jblDuracionCancionActualizarDisco.setText("Duración de la Canción: ");
+        jblDuracionCancionActualizarCancion.setText("Duración de la Canción: ");
 
         txtCodigoCancion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -259,8 +278,8 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jblTituloActualizarDisco)
-                            .addComponent(jblCodigoActualizarDisco))
+                            .addComponent(jblTituloActualizarCancion)
+                            .addComponent(jblCodigoActualizarCancion))
                         .addGap(105, 105, 105)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -271,12 +290,12 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jblLetraActualizarDisco)))
+                                .addComponent(jblLetraActualizarCancion)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jblDuracionCancionActualizarDisco)
+                        .addComponent(jblDuracionCancionActualizarCancion)
                         .addGap(18, 18, 18)
                         .addComponent(txtDuracionCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(399, Short.MAX_VALUE))))
@@ -286,18 +305,18 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblCodigoActualizarDisco)
+                    .addComponent(jblCodigoActualizarCancion)
                     .addComponent(txtCodigoCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscarCancion))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblTituloActualizarDisco)
+                    .addComponent(jblTituloActualizarCancion)
                     .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jblLetraActualizarDisco)
+                    .addComponent(jblLetraActualizarCancion)
                     .addComponent(txtLetra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jblDuracionCancionActualizarDisco)
+                    .addComponent(jblDuracionCancionActualizarCancion)
                     .addComponent(txtDuracionCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
@@ -498,17 +517,17 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCancelar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel jblApellidoActualizarDisco;
-    private javax.swing.JLabel jblCodigoActualizarDisco;
-    private javax.swing.JLabel jblDuracionCancionActualizarDisco;
-    private javax.swing.JLabel jblEdadActualizarDisco;
-    private javax.swing.JLabel jblIdActualizarDisco;
-    private javax.swing.JLabel jblLetraActualizarDisco;
-    private javax.swing.JLabel jblNacionalidadActualizarDisco;
-    private javax.swing.JLabel jblNombreActualizarDisco;
-    private javax.swing.JLabel jblNumeroComposicionesActualizarDisco;
-    private javax.swing.JLabel jblSalarioActualizarDisco;
-    private javax.swing.JLabel jblTituloActualizarDisco;
+    private javax.swing.JLabel jblApellidoActualizarCancion;
+    private javax.swing.JLabel jblCodigoActualizarCancion;
+    private javax.swing.JLabel jblDuracionCancionActualizarCancion;
+    private javax.swing.JLabel jblEdadActualizarCancion;
+    private javax.swing.JLabel jblIdActualizarCancion;
+    private javax.swing.JLabel jblLetraActualizarCancion;
+    private javax.swing.JLabel jblNacionalidadActualizarCancion;
+    private javax.swing.JLabel jblNombreActualizarCancion;
+    private javax.swing.JLabel jblNumeroComposicionesActualizarCancion;
+    private javax.swing.JLabel jblSalarioActualizarCancion;
+    private javax.swing.JLabel jblTituloActualizarCancion;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCodigoCancion;
     private javax.swing.JTextField txtDuracionCancion;

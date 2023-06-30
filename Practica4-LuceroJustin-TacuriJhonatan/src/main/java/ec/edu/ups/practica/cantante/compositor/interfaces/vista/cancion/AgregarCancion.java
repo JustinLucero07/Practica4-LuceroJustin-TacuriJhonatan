@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class AgregarCancion extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
 
     /**
      * Creates new form AgregarCancion
@@ -24,6 +27,22 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         this.controladorCompositor = controladorCompositor;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblCodigoAgregarCancion.setText(mensajes.getString("ventana.codigo"));
+        jblTituloAgregarCancion.setText(mensajes.getString("ventanaCancion.titulo"));
+        jblLetraAgregarCancion.setText(mensajes.getString("ventanaCancion.letra"));
+        jblDuracionCancionAgregarCancion.setText(mensajes.getString("ventanaCancion.duracioncancion"));
+        jblIdAgregarCancion.setText(mensajes.getString("ventana.id"));
+        jblNombreAgregarCancion.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoAgregarCancion.setText(mensajes.getString("ventana.apellido"));
+        jblEdadAgregarCancion.setText(mensajes.getString("ventana.edad"));
+        jblNacionalidadAgregarCancion.setText(mensajes.getString("ventana.nacionalidad"));
+        jblSalarioAgregarCancion.setText(mensajes.getString("ventana.salario"));
+        jblNumeroComposicionesAgregarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

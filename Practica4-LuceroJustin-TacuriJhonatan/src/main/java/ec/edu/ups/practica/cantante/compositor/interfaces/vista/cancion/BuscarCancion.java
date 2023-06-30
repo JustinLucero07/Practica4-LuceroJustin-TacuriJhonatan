@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class BuscarCancion extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
     
     /**
      * Creates new form BuscarCancion
@@ -22,6 +25,22 @@ public class BuscarCancion extends javax.swing.JInternalFrame {
     public BuscarCancion(ControladorCompositor controladorCompositor) {
         initComponents();
         this.controladorCompositor = controladorCompositor;
+    }
+    
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblCodigoBuscarCancion.setText(mensajes.getString("ventana.codigo"));
+        jblTituloBuscarCancion.setText(mensajes.getString("ventanaCancion.titulo"));
+        jblLetraBuscarCancion.setText(mensajes.getString("ventanaCancion.letra"));
+        jblDuracionCancionBuscarCancion.setText(mensajes.getString("ventanaCancion.duracioncancion"));
+        jblIdBuscarCancion.setText(mensajes.getString("ventana.id"));
+        jblNombreBuscarCancion.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoBuscarCancion.setText(mensajes.getString("ventana.apellido"));
+        jblEdadBuscarCancion.setText(mensajes.getString("ventana.edad"));
+        jblNacionalidadBuscarCancion.setText(mensajes.getString("ventana.nacionalidad"));
+        jblSalarioBuscarCancion.setText(mensajes.getString("ventana.salario"));
+        jblNumeroComposicionesBuscarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        
     }
 
     /**

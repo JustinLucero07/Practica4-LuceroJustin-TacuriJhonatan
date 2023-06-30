@@ -81,6 +81,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         //Internacionalizacion
         localizacion = Locale.getDefault();
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         cambiarIdioma();
     } 
     
@@ -138,6 +139,22 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         if(agregarCliente != null){
             agregarCliente.cambiarIdioma(localizacion);
+        }
+        
+        if(agregarCancion != null){
+            agregarCancion.cambiarIdioma(localizacion);
+        }
+        
+        if(actualizarCancion != null){
+            actualizarCancion.cambiarIdioma(localizacion);
+        }
+        
+        if(buscarCacion != null){
+            buscarCacion.cambiarIdioma(localizacion);
+        }
+        
+        if(eliminarCancion!= null){
+            eliminarCancion.cambiarIdioma(localizacion);
         }
     }
 
