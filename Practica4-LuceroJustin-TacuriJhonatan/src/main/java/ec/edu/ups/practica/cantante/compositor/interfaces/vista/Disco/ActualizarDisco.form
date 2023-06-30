@@ -105,8 +105,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNombreActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblEdadActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -115,8 +115,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNombreArtisticoActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblApellidoActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -132,9 +132,9 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblCodigoActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNombreDiscoActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblAnioLanzaminietoActualizarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -159,7 +159,7 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                          <Component id="jblIdActualizarDisco" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                           <Component id="txtIdCantante4" min="-2" pref="140" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
@@ -173,40 +173,40 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblIdActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtIdCantante4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="bntBuscar4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txtNombre4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblApellidoActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtApellido4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblEdadActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtEdad4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreArtisticoActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNombreArtistico4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblCodigoActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtCodigo4" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="bntBuscarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreDiscoActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNombreDisco4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblAnioLanzaminietoActualizarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtAnioLanzamiento4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="30" max="32767" attributes="0"/>
@@ -220,7 +220,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel37">
+                <Component class="javax.swing.JLabel" name="jblIdActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Buscar cantante para encontar disco : "/>
                   </Properties>
@@ -249,12 +249,12 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre4ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel39">
+                <Component class="javax.swing.JLabel" name="jblNombreActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nombre : "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel40">
+                <Component class="javax.swing.JLabel" name="jblApellidoActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Apellido :"/>
                   </Properties>
@@ -265,7 +265,7 @@
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel41">
+                <Component class="javax.swing.JLabel" name="jblEdadActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Edad :"/>
                   </Properties>
@@ -276,7 +276,7 @@
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel42">
+                <Component class="javax.swing.JLabel" name="jblNombreArtisticoActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nombre artistico :"/>
                   </Properties>
@@ -287,17 +287,17 @@
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel43">
+                <Component class="javax.swing.JLabel" name="jblCodigoActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Codigo :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel44">
+                <Component class="javax.swing.JLabel" name="jblNombreDiscoActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Nombre :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel45">
+                <Component class="javax.swing.JLabel" name="jblAnioLanzaminietoActualizarDisco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="A&#xf1;o de lanzamiento :"/>
                   </Properties>

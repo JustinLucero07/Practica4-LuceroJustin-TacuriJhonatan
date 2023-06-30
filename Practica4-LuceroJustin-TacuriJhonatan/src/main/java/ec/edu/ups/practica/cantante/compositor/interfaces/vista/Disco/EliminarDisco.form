@@ -59,8 +59,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel39" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel41" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblEdadEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -69,8 +69,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel42" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreArEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblApellidoEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -83,7 +83,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                  <Component id="jblIdEliminarDisco" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Component id="txtIdCantante4" min="-2" pref="140" max="-2" attributes="0"/>
                   <EmptySpace pref="42" max="32767" attributes="0"/>
@@ -95,9 +95,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel43" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel44" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel45" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblCodigoEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreDiscoEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblAnioLanzamientoEliminarDisco" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -124,40 +124,40 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblIdEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtIdCantante4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bntBuscar4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtNombre4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel39" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNombreEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblApellidoEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtApellido4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel41" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblEdadEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtEdad4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNombreArEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNombreArtistico4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblCodigoEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtCodigo4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="bntBuscarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel44" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNombreDiscoEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNombreDisco4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel45" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblAnioLanzamientoEliminarDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtAnioLanzamiento4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -171,7 +171,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel37">
+        <Component class="javax.swing.JLabel" name="jblIdEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Buscar cantante para encontar disco : "/>
           </Properties>
@@ -200,12 +200,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre4ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel39">
+        <Component class="javax.swing.JLabel" name="jblNombreEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre : "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel40">
+        <Component class="javax.swing.JLabel" name="jblApellidoEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido :"/>
           </Properties>
@@ -216,7 +216,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel41">
+        <Component class="javax.swing.JLabel" name="jblEdadEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Edad :"/>
           </Properties>
@@ -227,7 +227,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel42">
+        <Component class="javax.swing.JLabel" name="jblNombreArEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre artistico :"/>
           </Properties>
@@ -238,17 +238,17 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel43">
+        <Component class="javax.swing.JLabel" name="jblCodigoEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Codigo :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel44">
+        <Component class="javax.swing.JLabel" name="jblNombreDiscoEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel45">
+        <Component class="javax.swing.JLabel" name="jblAnioLanzamientoEliminarDisco">
           <Properties>
             <Property name="text" type="java.lang.String" value="A&#xf1;o de lanzamiento :"/>
           </Properties>

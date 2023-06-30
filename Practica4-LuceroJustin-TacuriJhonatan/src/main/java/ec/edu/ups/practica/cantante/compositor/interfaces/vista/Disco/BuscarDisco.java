@@ -36,21 +36,21 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel7 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
+        jblIdBuscarDisco = new javax.swing.JLabel();
         txtIdCantante4 = new javax.swing.JTextField();
         bntBuscar4 = new javax.swing.JButton();
         jLabel38 = new javax.swing.JLabel();
         txtNombre4 = new javax.swing.JTextField();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
+        jblNombreBuscarDisco = new javax.swing.JLabel();
+        jblApellidoBuscarDisco = new javax.swing.JLabel();
         txtApellido4 = new javax.swing.JTextField();
-        jLabel41 = new javax.swing.JLabel();
+        jblEdadBuscarDisco = new javax.swing.JLabel();
         txtEdad4 = new javax.swing.JTextField();
-        jLabel42 = new javax.swing.JLabel();
+        jblNombreArBuscarDisco = new javax.swing.JLabel();
         txtNombreArtistico4 = new javax.swing.JTextField();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
+        jblCodigoBuscarDisco = new javax.swing.JLabel();
+        jblNombreDiscoBuscarDisco = new javax.swing.JLabel();
+        jblAnioLanzamientoBuscarDisco = new javax.swing.JLabel();
         txtCodigo4 = new javax.swing.JTextField();
         txtNombreDisco4 = new javax.swing.JTextField();
         txtAnioLanzamiento4 = new javax.swing.JTextField();
@@ -59,7 +59,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar Disco"));
 
-        jLabel37.setText("Buscar cantante para encontar disco : ");
+        jblIdBuscarDisco.setText("Buscar cantante para encontar disco : ");
 
         bntBuscar4.setText("Buscar");
         bntBuscar4.addActionListener(new java.awt.event.ActionListener() {
@@ -78,28 +78,28 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel39.setText("Nombre : ");
+        jblNombreBuscarDisco.setText("Nombre : ");
 
-        jLabel40.setText("Apellido :");
+        jblApellidoBuscarDisco.setText("Apellido :");
 
         txtApellido4.setEditable(false);
         txtApellido4.setEnabled(false);
 
-        jLabel41.setText("Edad :");
+        jblEdadBuscarDisco.setText("Edad :");
 
         txtEdad4.setEditable(false);
         txtEdad4.setEnabled(false);
 
-        jLabel42.setText("Nombre artistico :");
+        jblNombreArBuscarDisco.setText("Nombre artistico :");
 
         txtNombreArtistico4.setEditable(false);
         txtNombreArtistico4.setEnabled(false);
 
-        jLabel43.setText("Codigo :");
+        jblCodigoBuscarDisco.setText("Codigo :");
 
-        jLabel44.setText("Nombre :");
+        jblNombreDiscoBuscarDisco.setText("Nombre :");
 
-        jLabel45.setText("Año de lanzamiento :");
+        jblAnioLanzamientoBuscarDisco.setText("Año de lanzamiento :");
 
         txtCodigo4.setEnabled(false);
         txtCodigo4.addActionListener(new java.awt.event.ActionListener() {
@@ -145,16 +145,16 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel39)
-                            .addComponent(jLabel41))
+                            .addComponent(jblNombreBuscarDisco)
+                            .addComponent(jblEdadBuscarDisco))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNombre4)
                             .addComponent(txtEdad4, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel42)
-                            .addComponent(jLabel40))
+                            .addComponent(jblNombreArBuscarDisco)
+                            .addComponent(jblApellidoBuscarDisco))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtApellido4)
@@ -163,9 +163,9 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel43)
-                    .addComponent(jLabel44)
-                    .addComponent(jLabel45))
+                    .addComponent(jblCodigoBuscarDisco)
+                    .addComponent(jblNombreDiscoBuscarDisco)
+                    .addComponent(jblAnioLanzamientoBuscarDisco))
                 .addGap(101, 101, 101)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtCodigo4)
@@ -178,7 +178,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel37)
+                .addComponent(jblIdBuscarDisco)
                 .addGap(61, 61, 61)
                 .addComponent(txtIdCantante4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
@@ -190,35 +190,35 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37)
+                    .addComponent(jblIdBuscarDisco)
                     .addComponent(txtIdCantante4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bntBuscar4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNombre4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel39)
-                    .addComponent(jLabel40)
+                    .addComponent(jblNombreBuscarDisco)
+                    .addComponent(jblApellidoBuscarDisco)
                     .addComponent(txtApellido4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel41)
+                    .addComponent(jblEdadBuscarDisco)
                     .addComponent(txtEdad4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel42)
+                    .addComponent(jblNombreArBuscarDisco)
                     .addComponent(txtNombreArtistico4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
                 .addComponent(jLabel38)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel43)
+                    .addComponent(jblCodigoBuscarDisco)
                     .addComponent(txtCodigo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bntBuscarDisco))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel44)
+                    .addComponent(jblNombreDiscoBuscarDisco)
                     .addComponent(txtNombreDisco4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel45)
+                    .addComponent(jblAnioLanzamientoBuscarDisco)
                     .addComponent(txtAnioLanzamiento4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bntCancelar4))
                 .addContainerGap(78, Short.MAX_VALUE))
@@ -334,16 +334,16 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntBuscar4;
     private javax.swing.JButton bntBuscarDisco;
     private javax.swing.JButton bntCancelar4;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JLabel jblAnioLanzamientoBuscarDisco;
+    private javax.swing.JLabel jblApellidoBuscarDisco;
+    private javax.swing.JLabel jblCodigoBuscarDisco;
+    private javax.swing.JLabel jblEdadBuscarDisco;
+    private javax.swing.JLabel jblIdBuscarDisco;
+    private javax.swing.JLabel jblNombreArBuscarDisco;
+    private javax.swing.JLabel jblNombreBuscarDisco;
+    private javax.swing.JLabel jblNombreDiscoBuscarDisco;
     private javax.swing.JTextField txtAnioLanzamiento4;
     private javax.swing.JTextField txtApellido4;
     private javax.swing.JTextField txtCodigo4;

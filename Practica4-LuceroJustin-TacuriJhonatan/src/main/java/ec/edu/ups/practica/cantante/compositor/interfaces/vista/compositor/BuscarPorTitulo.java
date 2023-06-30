@@ -32,13 +32,13 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jblIdBuscarPorTitulo = new javax.swing.JLabel();
+        jblNombreBuscarPorTitulo = new javax.swing.JLabel();
+        jblApellidoBuscarPorTitulo = new javax.swing.JLabel();
+        jblEdadBuscarPorTitulo = new javax.swing.JLabel();
+        jblNacionalidadBuscarPorTitulo = new javax.swing.JLabel();
+        jblSalarioBuscarPorTitulo = new javax.swing.JLabel();
+        jblNumeroComposicionesBuscarPorTitulo = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
@@ -48,24 +48,24 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         txtNumeroComposiciones = new javax.swing.JTextField();
         btnAceptar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jblTItuloCancionBuscarPorTitulo = new javax.swing.JLabel();
         txtTituloCancion = new javax.swing.JTextField();
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR COMPOSITOR"));
 
-        jLabel1.setText("ID:");
+        jblIdBuscarPorTitulo.setText("ID:");
 
-        jLabel2.setText("Nombre:");
+        jblNombreBuscarPorTitulo.setText("Nombre:");
 
-        jLabel3.setText("Apellido:");
+        jblApellidoBuscarPorTitulo.setText("Apellido:");
 
-        jLabel4.setText("Edad:");
+        jblEdadBuscarPorTitulo.setText("Edad:");
 
-        jLabel5.setText("Nacionalidad:");
+        jblNacionalidadBuscarPorTitulo.setText("Nacionalidad:");
 
-        jLabel6.setText("Salario:");
+        jblSalarioBuscarPorTitulo.setText("Salario:");
 
-        jLabel7.setText("Numero de Composiciones:");
+        jblNumeroComposicionesBuscarPorTitulo.setText("Numero de Composiciones:");
 
         txtId.setEnabled(false);
         txtId.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +136,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel8.setText("Ingrese el nombre de la cancion para encontrar a su comporsitor:");
+        jblTItuloCancionBuscarPorTitulo.setText("Ingrese el nombre de la cancion para encontrar a su comporsitor:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -147,9 +147,9 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(55, 55, 55)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel1)
+                            .addComponent(jblNombreBuscarPorTitulo)
+                            .addComponent(jblEdadBuscarPorTitulo)
+                            .addComponent(jblIdBuscarPorTitulo)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addGap(102, 102, 102)
@@ -158,10 +158,10 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                                     .addComponent(btnCancelar))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel7)
-                                        .addComponent(jLabel6)
-                                        .addComponent(jLabel5)
-                                        .addComponent(jLabel3))
+                                        .addComponent(jblNumeroComposicionesBuscarPorTitulo)
+                                        .addComponent(jblSalarioBuscarPorTitulo)
+                                        .addComponent(jblNacionalidadBuscarPorTitulo)
+                                        .addComponent(jblApellidoBuscarPorTitulo))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,7 +173,7 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
                                         .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel8)
+                        .addComponent(jblTItuloCancionBuscarPorTitulo)
                         .addGap(18, 18, 18)
                         .addComponent(txtTituloCancion, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -183,35 +183,35 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
+                    .addComponent(jblTItuloCancionBuscarPorTitulo)
                     .addComponent(txtTituloCancion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(jblIdBuscarPorTitulo)
                     .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jblNombreBuscarPorTitulo)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
+                    .addComponent(jblApellidoBuscarPorTitulo)
                     .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(jblEdadBuscarPorTitulo)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jblNacionalidadBuscarPorTitulo)
                     .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(jblSalarioBuscarPorTitulo)
                     .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(jblNumeroComposicionesBuscarPorTitulo)
                     .addComponent(txtNumeroComposiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -305,15 +305,15 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAceptar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jblApellidoBuscarPorTitulo;
+    private javax.swing.JLabel jblEdadBuscarPorTitulo;
+    private javax.swing.JLabel jblIdBuscarPorTitulo;
+    private javax.swing.JLabel jblNacionalidadBuscarPorTitulo;
+    private javax.swing.JLabel jblNombreBuscarPorTitulo;
+    private javax.swing.JLabel jblNumeroComposicionesBuscarPorTitulo;
+    private javax.swing.JLabel jblSalarioBuscarPorTitulo;
+    private javax.swing.JLabel jblTItuloCancionBuscarPorTitulo;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtId;
