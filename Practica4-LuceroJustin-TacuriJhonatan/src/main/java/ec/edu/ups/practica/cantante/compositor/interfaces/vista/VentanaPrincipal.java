@@ -85,7 +85,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     } 
     
     private void cambiarIdioma(){
-        
         mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         menuCantante.setText(mensajes.getString("menu.cantante"));
         menuCompositor.setText(mensajes.getString("menu.Compositor"));
@@ -117,7 +116,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemEspanol.setText(mensajes.getString("menuItem.espanol"));
         menuItemIngles.setText(mensajes.getString("menuItem.ingles"));
         menuItemFrances.setText(mensajes.getString("menuItem.frances"));
-        
         if(crearCompositor != null){
             crearCompositor.cambiarIdioma(localizacion);
         }
@@ -607,7 +605,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
     private void menuItemFrancesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemFrancesActionPerformed
         localizacion = new Locale("fr", "FR");
-        cambiarIdioma();
+        this.cambiarIdioma();
     }//GEN-LAST:event_menuItemFrancesActionPerformed
 
     /**
