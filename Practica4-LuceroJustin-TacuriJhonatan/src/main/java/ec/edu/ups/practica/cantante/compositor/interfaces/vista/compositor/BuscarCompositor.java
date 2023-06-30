@@ -6,6 +6,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class BuscarCompositor extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
 
     /**
      * Creates new form BuscarCompositor
@@ -23,6 +26,17 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         this.controladorCompositor = controladorCompositor;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblIdBuscarCompositor.setText(mensajes.getString("ventana.id"));
+        jblNombreBuscarCompositor.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoBuscarCompositor.setText(mensajes.getString("ventana.apellido"));
+        jblEdadBuscarCompositor.setText(mensajes.getString("ventana.edad"));
+        jblSalarioBuscarCompositor.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadBuscarCompositor.setText(mensajes.getString("ventana.nacionalidad"));
+        jblNumeroComposiconesBuscarCompositor.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -8,6 +8,8 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.Controlado
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +19,7 @@ import javax.swing.JOptionPane;
 public class AgregarCliente extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
     private ControladorCantante controladorCantante;
+    private ResourceBundle mensajes;
     
     /**
      * Creates new form AgregarCliente
@@ -27,6 +30,26 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
         this.controladorCantante = controladorCantante;
     }
 
+    
+     public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblIdCoAgregarCliente.setText(mensajes.getString("ventana.id"));
+        jblNombreCoAgregarCliente.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoCoAgregarCliente.setText(mensajes.getString("ventana.apellido"));
+        jblEdadCoAgregarCliente.setText(mensajes.getString("ventana.edad"));
+        jblSalarioCoAgregarCliente.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadCoAgregarCliente.setText(mensajes.getString("ventana.nacionalidad"));
+        jblNumeroComposicionesAgregarCliente.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        jblIdCaAgregarCliente.setText(mensajes.getString("ventana.id"));
+        jblNombreCaAgregarCliente.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoCaAgregarCliente.setText(mensajes.getString("ventana.apellido"));
+        jblEdadCaAgregarCliente.setText(mensajes.getString("ventana.edad"));
+        jblSalarioCaAgregarCliente.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadCaAgregarCliente.setText(mensajes.getString("ventana.nacionalidad"));
+        jblGeneroMusicalAgregarCliente.setText(mensajes.getString("ventanaCantante.generomusical"));
+        jblNumeroConciertosAgregarCliente.setText(mensajes.getString("ventanaCantante.s"));
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
