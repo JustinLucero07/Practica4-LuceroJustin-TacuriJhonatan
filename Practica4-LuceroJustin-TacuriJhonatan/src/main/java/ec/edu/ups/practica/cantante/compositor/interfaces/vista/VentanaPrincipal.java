@@ -119,6 +119,26 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if(crearCompositor != null){
             crearCompositor.cambiarIdioma(localizacion);
         }
+        
+        if(eliminarCompositor != null){
+            eliminarCompositor.cambiarIdioma(localizacion);
+        }
+        
+        if(buscarCompositor != null){
+            buscarCompositor.cambiarIdioma(localizacion);
+        }
+        
+        if(actualizarCompositor != null){
+            actualizarCompositor.cambiarIdioma(localizacion);
+        }
+        
+        if(buscarPorTitulo != null){
+            buscarPorTitulo.cambiarIdioma(localizacion);
+        }
+        
+        if(agregarCliente != null){
+            agregarCliente.cambiarIdioma(localizacion);
+        }
     }
 
     /**

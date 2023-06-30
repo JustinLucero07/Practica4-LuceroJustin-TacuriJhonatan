@@ -6,6 +6,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor;
 
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Compositor;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class EliminarCompositor extends javax.swing.JInternalFrame {
     private ControladorCompositor controladorCompositor;
+    private ResourceBundle mensajes;
     /**
      * Creates new form EliminarCompositor
      */
@@ -22,6 +25,17 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
         this.controladorCompositor = controladorCompositor;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblIdEliminarCompositor.setText(mensajes.getString("ventana.id"));
+        jblNombreEliminarCompositor.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoEliminarCompositor.setText(mensajes.getString("ventana.apellido"));
+        jblEdadEliminarCompositor.setText(mensajes.getString("ventana.edad"));
+        jblSalarioEliminarCompositor.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadEliminarCompositor.setText(mensajes.getString("ventana.nacionalidad"));
+        jblNumeroComposicionesEliminarCompositor.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
