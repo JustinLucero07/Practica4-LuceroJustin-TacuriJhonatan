@@ -65,7 +65,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private EliminarDisco eliminarDisco; 
     //Internacionalizacion 
     private Locale localizacion;
-    private ResourceBundle mensaje;
+    private ResourceBundle mensajes;
     
     /**
      * Creates new form VentanaPrincipal
@@ -81,43 +81,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         
         //Internacionalizacion
         localizacion = Locale.getDefault();
-        mensaje = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
         cambiarIdioma();
     } 
     
     private void cambiarIdioma(){
         
-        mensaje = ResourceBundle.getBundle("mensaje ", localizacion);
-        menuCantante.setText(mensaje.getString("menu.cantante"));
-        menuCompositor.setText(mensaje.getString("menu.Compositor"));
-        menuIdiomas.setText(mensaje.getString("menu.idiomas"));
-        menuOpciones.setText(mensaje.getString("menu.opciones"));
-        menuItemCrearCantante.setText(mensaje.getString("menuItem.crear"));
-        menuItemBuscarCantante.setText(mensaje.getString("menuItem.buscar"));
-        menuItemEliminarCantante.setText(mensaje.getString("menuItem.eliminar"));
-        menuItemActualizarCantante.setText(mensaje.getString("menuItem.actualizar"));
-        menuItemListarCantante.setText(mensaje.getString("menuItem.listar"));
-        menuItemDisco.setText(mensaje.getString("menuItem.disco")); 
-        menuItemCrearCompositor.setText(mensaje.getString("menuItem.crear"));
-        menuItemBuscarCompositor.setText(mensaje.getString("menuItem.buscar"));
-        menuItemEliminarCompositor.setText(mensaje.getString("menuItem.eliminar"));
-        menuItemActualizarCompositor.setText(mensaje.getString("menuItem.actualizar"));
-        menuItemListarCompositor.setText(mensaje.getString("menuItem.listar"));
-        menuItemBuscarPorTitulo.setText(mensaje.getString("menuItem.buscartitulo"));
-        menuItemAgregarCliemt.setText(mensaje.getString("menuItem.agregarcliente")); 
-        menuItemCancion.setText(mensaje.getString("menuItem.cancion"));
-        menuItemAgregarCancion.setText(mensaje.getString("menuItem.agregar"));
-        menuItemAgregarDisco.setText(mensaje.getString("menuItem.agregar"));
-        menuItemBuscarCancion.setText(mensaje.getString("menuItem.buscar"));
-        menuItemEliminarCancion.setText(mensaje.getString("menuItem.eliminar"));
-        menuItemActualizarCancion.setText(mensaje.getString("menuItem.actualizar"));
-        menuItemBuscarDisco.setText(mensaje.getString("menuItem.buscar"));
-        menuItemEliminarDisco.setText(mensaje.getString("menuItem.eliminar"));
-        menuItemActualizarDisco.setText(mensaje.getString("menuItem.actualizar"));
-        menuItemSalirMenu.setText(mensaje.getString("menuItem.salir")); 
-        menuItemEspanol.setText(mensaje.getString("menuItem.espanol"));
-        menuItemIngles.setText(mensaje.getString("menuItem.ingles"));
-        menuItemFrances.setText(mensaje.getString("menuItem.frances"));
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        menuCantante.setText(mensajes.getString("menu.cantante"));
+        menuCompositor.setText(mensajes.getString("menu.Compositor"));
+        menuIdiomas.setText(mensajes.getString("menu.idiomas"));
+        menuOpciones.setText(mensajes.getString("menu.opciones"));
+        menuItemCrearCantante.setText(mensajes.getString("menuItem.crear"));
+        menuItemBuscarCantante.setText(mensajes.getString("menuItem.buscar"));
+        menuItemEliminarCantante.setText(mensajes.getString("menuItem.eliminar"));
+        menuItemActualizarCantante.setText(mensajes.getString("menuItem.actualizar"));
+        menuItemListarCantante.setText(mensajes.getString("menuItem.listar"));
+        menuItemDisco.setText(mensajes.getString("menuItem.disco")); 
+        menuItemCrearCompositor.setText(mensajes.getString("menuItem.crear"));
+        menuItemBuscarCompositor.setText(mensajes.getString("menuItem.buscar"));
+        menuItemEliminarCompositor.setText(mensajes.getString("menuItem.eliminar"));
+        menuItemActualizarCompositor.setText(mensajes.getString("menuItem.actualizar"));
+        menuItemListarCompositor.setText(mensajes.getString("menuItem.listar"));
+        menuItemBuscarPorTitulo.setText(mensajes.getString("menuItem.buscartitulo"));
+        menuItemAgregarCliemt.setText(mensajes.getString("menuItem.agregarcliente")); 
+        menuItemCancion.setText(mensajes.getString("menuItem.cancion"));
+        menuItemAgregarCancion.setText(mensajes.getString("menuItem.agregar"));
+        menuItemAgregarDisco.setText(mensajes.getString("menuItem.agregar"));
+        menuItemBuscarCancion.setText(mensajes.getString("menuItem.buscar"));
+        menuItemEliminarCancion.setText(mensajes.getString("menuItem.eliminar"));
+        menuItemActualizarCancion.setText(mensajes.getString("menuItem.actualizar"));
+        menuItemBuscarDisco.setText(mensajes.getString("menuItem.buscar"));
+        menuItemEliminarDisco.setText(mensajes.getString("menuItem.eliminar"));
+        menuItemActualizarDisco.setText(mensajes.getString("menuItem.actualizar"));
+        menuItemSalirMenu.setText(mensajes.getString("menuItem.salir")); 
+        menuItemEspanol.setText(mensajes.getString("menuItem.espanol"));
+        menuItemIngles.setText(mensajes.getString("menuItem.ingles"));
+        menuItemFrances.setText(mensajes.getString("menuItem.frances"));
         
         if(crearCompositor != null){
             crearCompositor.cambiarIdioma(localizacion);
