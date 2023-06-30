@@ -66,7 +66,7 @@ public class ControladorCantante {
         
     }
     
-    public Disco buscarporDisco(String nombre){
+    public Cantante buscarporDisco(String nombre){
         return cantanteDao.buscarPorNombreDeDisco(nombre);
     }
     

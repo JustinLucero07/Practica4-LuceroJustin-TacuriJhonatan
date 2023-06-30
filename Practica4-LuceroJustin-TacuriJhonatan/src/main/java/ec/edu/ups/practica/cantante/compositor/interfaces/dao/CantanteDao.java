@@ -64,13 +64,12 @@ public class CantanteDao implements ICantanteDao {
     }
     
     @Override
-    public Disco buscarPorNombreDeDisco(String valor) {
+    public Cantante buscarPorNombreDeDisco(String valor) {
         for(Cantante cantante : listaCantantes){
             if(cantante instanceof Cantante){
                 for(Disco disco : cantante.getDiscos()){
                     if(disco.getNombre().equals(valor)){
-                        System.out.println("Cantante: " + cantante.getNombreArtistico());
-                        return disco;
+                        return cantante;
                     }
                 }
             }
