@@ -37,6 +37,9 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
         jblApellidoAAgregarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoAgregarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoAgregarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        bntBuscar.setText(mensajes.getString("boton.buscar"));
+        bntAgregar.setText(mensajes.getString("boton.agregar"));
+        bntCancelar.setText(mensajes.getString("boton.cancelar")); 
     }
 
     /**

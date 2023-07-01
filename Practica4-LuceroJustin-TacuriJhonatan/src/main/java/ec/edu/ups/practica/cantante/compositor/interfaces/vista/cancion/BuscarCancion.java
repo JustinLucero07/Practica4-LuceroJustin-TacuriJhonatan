@@ -40,7 +40,9 @@ public class BuscarCancion extends javax.swing.JInternalFrame {
         jblNacionalidadBuscarCancion.setText(mensajes.getString("ventana.nacionalidad"));
         jblSalarioBuscarCancion.setText(mensajes.getString("ventana.salario"));
         jblNumeroComposicionesBuscarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
-        
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnBuscarCancion.setText(mensajes.getString("boton.buscar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
 
     /**

@@ -39,6 +39,9 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
         jblApellidoBuscarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoBuscarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoBuscarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        bntBuscar4.setText(mensajes.getString("boton.buscar"));
+        bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
+        bntCancelar4.setText(mensajes.getString("boton.cancelar")); 
     }
 
     /**

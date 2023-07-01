@@ -40,7 +40,9 @@ public class AgregarCancion extends javax.swing.JInternalFrame {
         jblNacionalidadAgregarCancion.setText(mensajes.getString("ventana.nacionalidad"));
         jblSalarioAgregarCancion.setText(mensajes.getString("ventana.salario"));
         jblNumeroComposicionesAgregarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
-        
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnAgregar.setText(mensajes.getString("boton.agregar"));
+        btnCancelarAgregar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

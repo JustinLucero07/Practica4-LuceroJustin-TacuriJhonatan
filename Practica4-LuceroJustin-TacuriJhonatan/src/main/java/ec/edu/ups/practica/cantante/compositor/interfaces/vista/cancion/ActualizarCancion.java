@@ -40,6 +40,10 @@ public class ActualizarCancion extends javax.swing.JInternalFrame {
         jblNacionalidadActualizarCancion.setText(mensajes.getString("ventana.nacionalidad"));
         jblSalarioActualizarCancion.setText(mensajes.getString("ventana.salario"));
         jblNumeroComposicionesActualizarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnActualizar.setText(mensajes.getString("boton.actualizar"));
+        btnBuscarCancion.setText(mensajes.getString("boton.buscar"));
+        btnAceptar.setText(mensajes.getString("boton.aceptar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
         
     }
     

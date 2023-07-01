@@ -40,7 +40,10 @@ public class EliminarCancion extends javax.swing.JInternalFrame {
         jblNacionalidadEliminarCancion.setText(mensajes.getString("ventana.nacionalidad"));
         jblSalarioEliminarCancion.setText(mensajes.getString("ventana.salario"));
         jblNumeroComposicionesEliminarCancion.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
-        
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnBuscarCancion.setText(mensajes.getString("boton.buscar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        btnEliminarCancion.setText(mensajes.getString("boton.eliminar"));
     }
     
     /**

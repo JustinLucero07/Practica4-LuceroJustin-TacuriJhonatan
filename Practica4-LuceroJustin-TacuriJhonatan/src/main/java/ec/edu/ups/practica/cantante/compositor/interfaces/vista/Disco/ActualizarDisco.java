@@ -38,6 +38,10 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         jblApellidoActualizarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoActualizarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzaminietoActualizarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        bntActualizar.setText(mensajes.getString("boton.actualizar"));
+        bntBuscar4.setText(mensajes.getString("boton.buscar"));
+        bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
+        bntCancelar4.setText(mensajes.getString("boton.cancelar")); 
     }
 
     /**

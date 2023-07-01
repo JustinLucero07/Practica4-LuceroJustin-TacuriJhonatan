@@ -38,6 +38,10 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
         jblApellidoEliminarDisco.setText(mensajes.getString("ventana.apellido"));
         jblNombreDiscoEliminarDisco.setText(mensajes.getString("ventana.nombre"));
         jblAnioLanzamientoEliminarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
+        bntEliminar.setText(mensajes.getString("boton.eliminar"));
+        bntBuscar4.setText(mensajes.getString("boton.buscar"));
+        bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
+        bntCancelar4.setText(mensajes.getString("boton.cancelar")); 
     }
 
     /**
