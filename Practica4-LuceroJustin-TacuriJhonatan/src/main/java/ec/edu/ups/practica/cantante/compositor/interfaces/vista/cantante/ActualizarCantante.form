@@ -55,17 +55,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel4" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                      <Component id="jLabel11" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="jblIdActualizarCantante" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNombreActualizarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblApellidoActualizarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblEdadActualizarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblNacionalidadActualizarCantante" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="jblSalarioActualizarCantante" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="jblNombreArtisticoActualizarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblGeneroMusicalActualizarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblNumeroSencillosActualizarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblNumeroConciertosActualizarCantante" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="jblNumeroGiras" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -110,58 +110,58 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblIdActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="bntBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNombreActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblApellidoActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtApellido" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblEdadActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblNacionalidadActualizarCantante" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="txtNacionalidad" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblSalarioActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtSalario" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreArtisticoActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNombreArtistico" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblGeneroMusicalActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtGeneroMusical" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNumeroSencillosActualizarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNumeroSencillos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Component id="jblNumeroConciertosActualizarCantante" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="txtNumeroConciertos" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNumeroGiras" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNumeroGiras" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -180,7 +180,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="jblNumeroConciertosActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Conciertos:"/>
           </Properties>
@@ -190,7 +190,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="jblNumeroGiras">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Giras:"/>
           </Properties>
@@ -200,7 +200,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jblIdActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="ID:"/>
           </Properties>
@@ -216,7 +216,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bntActualizarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="jblNombreActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
@@ -234,7 +234,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="jblApellidoActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
@@ -244,7 +244,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="jblEdadActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Edad:"/>
           </Properties>
@@ -254,7 +254,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="jblNacionalidadActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
           </Properties>
@@ -264,7 +264,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="jblSalarioActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salario:"/>
           </Properties>
@@ -274,7 +274,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="jblNombreArtisticoActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre Artistico:"/>
           </Properties>
@@ -284,7 +284,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="jblGeneroMusicalActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Genero Musical:"/>
           </Properties>
@@ -294,7 +294,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jblNumeroSencillosActualizarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Sencillos:"/>
           </Properties>

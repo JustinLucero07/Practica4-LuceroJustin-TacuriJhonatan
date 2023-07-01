@@ -47,17 +47,17 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel4" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                      <Component id="jLabel5" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                      <Component id="jLabel10" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                      <Component id="jLabel11" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="jblIdEliminarCantante" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNombreEliminarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblApellidoEliminarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblEdadEliminarCantante" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                      <Component id="jblNacionalidadEliminarCantante" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="jblSalarioEliminarCantante" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="jblNombreArEliminarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblGeneroMusicalEliminarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblNumeroSencillosEliminarCantante" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      <Component id="jblNumeroConciertosEliminarCantante" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="jblNumeroGirasEliminarCantante" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -97,58 +97,58 @@
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblIdEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="bntBuscarr" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNombreEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblApellidoEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtApellido" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblEdadEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblNacionalidadEliminarCantante" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="txtNacionalidad" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblSalarioEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtSalario" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreArEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNombreArtistico" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblGeneroMusicalEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtGeneroMusical" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNumeroSencillosEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtNumeroSencillos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <Component id="jblNumeroConciertosEliminarCantante" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="txtNumeroConciertos" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jblNumeroGirasEliminarCantante" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNumeroGiras" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -162,57 +162,57 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="jblIdEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="ID:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="jblNombreEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="jblApellidoEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="jblEdadEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Edad:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="jblNacionalidadEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="jblSalarioEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="jblNombreArEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre Artistico:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="jblGeneroMusicalEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Genero Musical:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jblNumeroSencillosEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Sencillos:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="jblNumeroConciertosEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Conciertos:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="jblNumeroGirasEliminarCantante">
           <Properties>
             <Property name="text" type="java.lang.String" value="Numero de Giras:"/>
           </Properties>

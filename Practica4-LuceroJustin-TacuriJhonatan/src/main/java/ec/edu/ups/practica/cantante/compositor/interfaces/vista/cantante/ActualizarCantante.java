@@ -8,6 +8,8 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.Controlado
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,12 +19,29 @@ import javax.swing.JOptionPane;
 public class ActualizarCantante extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante;
     private List<Disco> listaDiscos;
+    private ResourceBundle mensajes;
     /**
      * Creates new form ActualizarCantante
      */
     public ActualizarCantante(ControladorCantante controladorCantante) {
         initComponents();
         this.controladorCantante = controladorCantante;
+        
+    }
+    
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblIdActualizarCantante.setText(mensajes.getString("ventana.id"));
+        jblNombreActualizarCantante.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoActualizarCantante.setText(mensajes.getString("ventana.apellido"));
+        jblEdadActualizarCantante.setText(mensajes.getString("ventana.edad"));
+        jblSalarioActualizarCantante.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadActualizarCantante.setText(mensajes.getString("ventana.nacionalidad"));
+        jblGeneroMusicalActualizarCantante.setText(mensajes.getString("ventanaCantante.generomusical"));
+        jblNumeroConciertosActualizarCantante.setText(mensajes.getString("ventanaCantante.numeroconciertos"));
+        jblNumeroGiras.setText(mensajes.getString("ventanaCantante.numerogiras"));
+        jblNumeroSencillosActualizarCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
+        jblNombreArtisticoActualizarCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         
     }
 
@@ -37,29 +56,29 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         txtNumeroSencillos = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
+        jblNumeroConciertosActualizarCantante = new javax.swing.JLabel();
         txtNumeroConciertos = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        jblNumeroGiras = new javax.swing.JLabel();
         txtNumeroGiras = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jblIdActualizarCantante = new javax.swing.JLabel();
         txtID = new javax.swing.JTextField();
         bntActualizar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jblNombreActualizarCantante = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         btnCancelar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jblApellidoActualizarCantante = new javax.swing.JLabel();
         txtApellido = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jblEdadActualizarCantante = new javax.swing.JLabel();
         txtEdad = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jblNacionalidadActualizarCantante = new javax.swing.JLabel();
         txtNacionalidad = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jblSalarioActualizarCantante = new javax.swing.JLabel();
         txtSalario = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        jblNombreArtisticoActualizarCantante = new javax.swing.JLabel();
         txtNombreArtistico = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        jblGeneroMusicalActualizarCantante = new javax.swing.JLabel();
         txtGeneroMusical = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        jblNumeroSencillosActualizarCantante = new javax.swing.JLabel();
         bntBuscar = new javax.swing.JButton();
 
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
@@ -84,15 +103,15 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
 
         txtNumeroSencillos.setEnabled(false);
 
-        jLabel10.setText("Numero de Conciertos:");
+        jblNumeroConciertosActualizarCantante.setText("Numero de Conciertos:");
 
         txtNumeroConciertos.setEnabled(false);
 
-        jLabel11.setText("Numero de Giras:");
+        jblNumeroGiras.setText("Numero de Giras:");
 
         txtNumeroGiras.setEnabled(false);
 
-        jLabel1.setText("ID:");
+        jblIdActualizarCantante.setText("ID:");
 
         bntActualizar.setText("Actualizar");
         bntActualizar.setEnabled(false);
@@ -102,7 +121,7 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel2.setText("Nombre:");
+        jblNombreActualizarCantante.setText("Nombre:");
 
         txtNombre.setEnabled(false);
 
@@ -113,31 +132,31 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel3.setText("Apellido:");
+        jblApellidoActualizarCantante.setText("Apellido:");
 
         txtApellido.setEnabled(false);
 
-        jLabel4.setText("Edad:");
+        jblEdadActualizarCantante.setText("Edad:");
 
         txtEdad.setEnabled(false);
 
-        jLabel5.setText("Nacionalidad:");
+        jblNacionalidadActualizarCantante.setText("Nacionalidad:");
 
         txtNacionalidad.setEnabled(false);
 
-        jLabel6.setText("Salario:");
+        jblSalarioActualizarCantante.setText("Salario:");
 
         txtSalario.setEnabled(false);
 
-        jLabel7.setText("Nombre Artistico:");
+        jblNombreArtisticoActualizarCantante.setText("Nombre Artistico:");
 
         txtNombreArtistico.setEnabled(false);
 
-        jLabel8.setText("Genero Musical:");
+        jblGeneroMusicalActualizarCantante.setText("Genero Musical:");
 
         txtGeneroMusical.setEnabled(false);
 
-        jLabel9.setText("Numero de Sencillos:");
+        jblNumeroSencillosActualizarCantante.setText("Numero de Sencillos:");
 
         bntBuscar.setText("Buscar");
         bntBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -153,17 +172,17 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jblIdActualizarCantante)
+                    .addComponent(jblNombreActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblApellidoActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblEdadActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNacionalidadActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblSalarioActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNombreArtisticoActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblGeneroMusicalActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroSencillosActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroConciertosActualizarCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -200,46 +219,46 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
+                                    .addComponent(jblIdActualizarCantante)
                                     .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(bntBuscar))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
+                                    .addComponent(jblNombreActualizarCantante)
                                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel3)
+                                    .addComponent(jblApellidoActualizarCantante)
                                     .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel4)
+                                    .addComponent(jblEdadActualizarCantante)
                                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
+                                .addComponent(jblNacionalidadActualizarCantante))
                             .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(jblSalarioActualizarCantante)
                             .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
+                            .addComponent(jblNombreArtisticoActualizarCantante)
                             .addComponent(txtNombreArtistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(jblGeneroMusicalActualizarCantante)
                             .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
+                            .addComponent(jblNumeroSencillosActualizarCantante)
                             .addComponent(txtNumeroSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel10))
+                        .addComponent(jblNumeroConciertosActualizarCantante))
                     .addComponent(txtNumeroConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(jblNumeroGiras)
                     .addComponent(txtNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -370,18 +389,18 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntActualizar;
     private javax.swing.JButton bntBuscar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jblApellidoActualizarCantante;
+    private javax.swing.JLabel jblEdadActualizarCantante;
+    private javax.swing.JLabel jblGeneroMusicalActualizarCantante;
+    private javax.swing.JLabel jblIdActualizarCantante;
+    private javax.swing.JLabel jblNacionalidadActualizarCantante;
+    private javax.swing.JLabel jblNombreActualizarCantante;
+    private javax.swing.JLabel jblNombreArtisticoActualizarCantante;
+    private javax.swing.JLabel jblNumeroConciertosActualizarCantante;
+    private javax.swing.JLabel jblNumeroGiras;
+    private javax.swing.JLabel jblNumeroSencillosActualizarCantante;
+    private javax.swing.JLabel jblSalarioActualizarCantante;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtGeneroMusical;

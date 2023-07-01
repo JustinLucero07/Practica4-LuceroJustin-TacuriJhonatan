@@ -110,17 +110,17 @@
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                              <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="jLabel5" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="jLabel6" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                              <Component id="jLabel7" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="jLabel9" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="jLabel10" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="jLabel11" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="jLabel12" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="jblIdBuscarporDisco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNombreBuscarporDisco" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                              <Component id="jblApellidoBuscarporDisco" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                              <Component id="jblEdadBuscarporDisco" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                              <Component id="jblNacionalidadBuscarporDisco" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="jblSalarioBuscarporDisco" alignment="0" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="jblNombreArtisticoBuscarporDisco" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="jblGeneroMusicalBuscarporDisco" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="jblNumeroSencillosBuscarporDisco" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                              <Component id="jblNumeroConciertosBuscarporDisco" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="jblNumeroGirasBuscarporDisco" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel13" min="-2" pref="118" max="-2" attributes="0"/>
@@ -156,58 +156,58 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jblIdBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jblNombreBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jblApellidoBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtApellido" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jblEdadBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtEdad" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jblNacionalidadBuscarporDisco" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="txtNacionalidad" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblSalarioBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtSalario" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblNombreArtisticoBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtNombreArtistico" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblGeneroMusicalBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtGeneroMusical" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jblNumeroSencillosBuscarporDisco" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtNumeroSencillos" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                              <Component id="jblNumeroConciertosBuscarporDisco" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="txtNumeroConciertos" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtNumeroGiras" alignment="0" min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jblNumeroGirasBuscarporDisco" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="18" max="32767" attributes="0"/>
                       <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
@@ -217,57 +217,57 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="jblIdBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="jblNombreBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nombre:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jblApellidoBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Apellido:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="jblEdadBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edad:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="jblNacionalidadBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nacionalidad:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="jblSalarioBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Salario:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
+            <Component class="javax.swing.JLabel" name="jblNombreArtisticoBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nombre Artistico:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="jblGeneroMusicalBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Genero Musical:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel10">
+            <Component class="javax.swing.JLabel" name="jblNumeroSencillosBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numero de Sencillos:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel11">
+            <Component class="javax.swing.JLabel" name="jblNumeroConciertosBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numero de Conciertos:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel12">
+            <Component class="javax.swing.JLabel" name="jblNumeroGirasBuscarporDisco">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Numero de Giras:"/>
               </Properties>

@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.Disco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,12 +19,25 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante;
     private Cantante cantanteTempo;
     private Disco disco;
+    private ResourceBundle mensajes;
     /**
      * Creates new form EliminarDisco
      */
     public EliminarDisco(ControladorCantante controladorCantante) {
         initComponents();
         this.controladorCantante = controladorCantante;
+    }
+    
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblCodigoEliminarDisco.setText(mensajes.getString("ventana.codigo"));
+        jblIdEliminarDisco.setText(mensajes.getString("ventana.id"));
+        jblNombreEliminarDisco.setText(mensajes.getString("ventana.nombre"));
+        jblNombreArEliminarDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
+        jblEdadEliminarDisco.setText(mensajes.getString("ventana.edad"));
+        jblApellidoEliminarDisco.setText(mensajes.getString("ventana.apellido"));
+        jblNombreDiscoEliminarDisco.setText(mensajes.getString("ventana.nombre"));
+        jblAnioLanzamientoEliminarDisco.setText(mensajes.getString("ventanaDisco.aniolanzamiento"));
     }
 
     /**

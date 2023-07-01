@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,6 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class CrearCantante extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante;
+    private ResourceBundle mensajes;
     /**
      * Creates new form VentanaCrearCantante
      */
@@ -23,6 +26,22 @@ public class CrearCantante extends javax.swing.JInternalFrame {
         this.controladorCantante = controladorCantante;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        jblIdCrearCantante.setText(mensajes.getString("ventana.id"));
+        jblNombreCrearCantante.setText(mensajes.getString("ventana.nombre"));
+        jblApellidoCrearCantante.setText(mensajes.getString("ventana.apellido"));
+        jblEdadCrearCantante.setText(mensajes.getString("ventana.edad"));
+        jblSalarioCrearCantante.setText(mensajes.getString("ventana.salario"));
+        jblNacionalidadCrearCantante.setText(mensajes.getString("ventana.nacionalidad"));
+        jblGeneroMusicalCrearCantante.setText(mensajes.getString("ventanaCantante.generomusical"));
+        jblNumeroConciertosCrearCantante.setText(mensajes.getString("ventanaCantante.numeroconciertos"));
+        jblNumeroGirasCrearCantante.setText(mensajes.getString("ventanaCantante.numerogiras"));
+        jblNumeroSencillosCrearCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
+        jblNombreArCrearCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,17 +52,17 @@ public class CrearCantante extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        jblIdCrearCantante = new javax.swing.JLabel();
+        jblNombreCrearCantante = new javax.swing.JLabel();
+        jblApellidoCrearCantante = new javax.swing.JLabel();
+        jblEdadCrearCantante = new javax.swing.JLabel();
+        jblNacionalidadCrearCantante = new javax.swing.JLabel();
+        jblSalarioCrearCantante = new javax.swing.JLabel();
+        jblNombreArCrearCantante = new javax.swing.JLabel();
+        jblGeneroMusicalCrearCantante = new javax.swing.JLabel();
+        jblNumeroSencillosCrearCantante = new javax.swing.JLabel();
+        jblNumeroConciertosCrearCantante = new javax.swing.JLabel();
+        jblNumeroGirasCrearCantante = new javax.swing.JLabel();
         txtID = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
@@ -62,27 +81,27 @@ public class CrearCantante extends javax.swing.JInternalFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("CREAR CANTANTE"));
 
-        jLabel1.setText("ID:");
+        jblIdCrearCantante.setText("ID:");
 
-        jLabel2.setText("Nombre:");
+        jblNombreCrearCantante.setText("Nombre:");
 
-        jLabel3.setText("Apellido:");
+        jblApellidoCrearCantante.setText("Apellido:");
 
-        jLabel4.setText("Edad:");
+        jblEdadCrearCantante.setText("Edad:");
 
-        jLabel5.setText("Nacionalidad:");
+        jblNacionalidadCrearCantante.setText("Nacionalidad:");
 
-        jLabel6.setText("Salario:");
+        jblSalarioCrearCantante.setText("Salario:");
 
-        jLabel7.setText("Nombre Artistico:");
+        jblNombreArCrearCantante.setText("Nombre Artistico:");
 
-        jLabel8.setText("Genero Musical:");
+        jblGeneroMusicalCrearCantante.setText("Genero Musical:");
 
-        jLabel9.setText("Numero de Sencillos:");
+        jblNumeroSencillosCrearCantante.setText("Numero de Sencillos:");
 
-        jLabel10.setText("Numero de Conciertos:");
+        jblNumeroConciertosCrearCantante.setText("Numero de Conciertos:");
 
-        jLabel11.setText("Numero de Giras:");
+        jblNumeroGirasCrearCantante.setText("Numero de Giras:");
 
         btnCrearCantante.setText("Aceptar");
         btnCrearCantante.addActionListener(new java.awt.event.ActionListener() {
@@ -105,17 +124,17 @@ public class CrearCantante extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jblIdCrearCantante)
+                    .addComponent(jblNombreCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblApellidoCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblEdadCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNacionalidadCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblSalarioCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNombreArCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblGeneroMusicalCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroSencillosCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroConciertosCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jblNumeroGirasCrearCantante, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(66, 66, 66)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -146,45 +165,45 @@ public class CrearCantante extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel1)
+                                    .addComponent(jblIdCrearCantante)
                                     .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel2)
+                                    .addComponent(jblNombreCrearCantante)
                                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel3)
+                                    .addComponent(jblApellidoCrearCantante)
                                     .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel4)
+                                    .addComponent(jblEdadCrearCantante)
                                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
+                                .addComponent(jblNacionalidadCrearCantante))
                             .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
+                            .addComponent(jblSalarioCrearCantante)
                             .addComponent(txtSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
+                            .addComponent(jblNombreArCrearCantante)
                             .addComponent(txtNombreArtistico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                            .addComponent(jblGeneroMusicalCrearCantante)
                             .addComponent(txtGeneroMusical, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
+                            .addComponent(jblNumeroSencillosCrearCantante)
                             .addComponent(txtNumeroSencillos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel10))
+                        .addComponent(jblNumeroConciertosCrearCantante))
                     .addComponent(txtNumeroConciertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
+                    .addComponent(jblNumeroGirasCrearCantante)
                     .addComponent(txtNumeroGiras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -267,18 +286,18 @@ public class CrearCantante extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCrearCantante;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jblApellidoCrearCantante;
+    private javax.swing.JLabel jblEdadCrearCantante;
+    private javax.swing.JLabel jblGeneroMusicalCrearCantante;
+    private javax.swing.JLabel jblIdCrearCantante;
+    private javax.swing.JLabel jblNacionalidadCrearCantante;
+    private javax.swing.JLabel jblNombreArCrearCantante;
+    private javax.swing.JLabel jblNombreCrearCantante;
+    private javax.swing.JLabel jblNumeroConciertosCrearCantante;
+    private javax.swing.JLabel jblNumeroGirasCrearCantante;
+    private javax.swing.JLabel jblNumeroSencillosCrearCantante;
+    private javax.swing.JLabel jblSalarioCrearCantante;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtGeneroMusical;

@@ -20,6 +20,7 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.BuscarCa
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cancion.EliminarCancion;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.ActualizarCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.BuscarCantante;
+import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.BuscarPorNombreDeDisco;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.EliminarCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.CrearCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante.ListarCantante;
@@ -63,6 +64,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private BuscarDisco buscarDisco; 
     private BuscarPorTitulo buscarPorTitulo;
     private EliminarDisco eliminarDisco; 
+    private BuscarPorNombreDeDisco buscarPorNombreDeDisco;
+    
     //Internacionalizacion 
     private Locale localizacion;
     private ResourceBundle mensajes;
@@ -117,6 +120,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemEspanol.setText(mensajes.getString("menuItem.espanol"));
         menuItemIngles.setText(mensajes.getString("menuItem.ingles"));
         menuItemFrances.setText(mensajes.getString("menuItem.frances"));
+        menuItemBuscaporDisco.setText(mensajes.getString("menuItemBuscarPorNombreDeDisco.buscarPorNombreDisco")); 
         if(crearCompositor != null){
             crearCompositor.cambiarIdioma(localizacion);
         }
@@ -156,6 +160,42 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         if(eliminarCancion!= null){
             eliminarCancion.cambiarIdioma(localizacion);
         }
+        
+        if(agregarDisco!= null){
+            agregarDisco.cambiarIdioma(localizacion);
+        }
+        
+        if(actualizarDisco!= null){
+            actualizarDisco.cambiarIdioma(localizacion);
+        }
+        
+        if(buscarDisco!= null){
+            buscarDisco.cambiarIdioma(localizacion);
+        }
+        
+        if(eliminarDisco!= null){
+            eliminarDisco.cambiarIdioma(localizacion);
+        }
+        
+        if(ventanaCrearCantante!= null){
+            ventanaCrearCantante.cambiarIdioma(localizacion);
+        }
+        
+        if(ventanaBuscarCantante!= null){
+            ventanaBuscarCantante.cambiarIdioma(localizacion);
+        }
+        
+        if(actualizarCantante!= null){
+            actualizarCantante.cambiarIdioma(localizacion);
+        }
+        
+        if(buscarPorNombreDeDisco!= null){
+            buscarPorNombreDeDisco.cambiarIdioma(localizacion);
+        }
+        
+        if(eliminarCantante!= null){
+            eliminarCantante.cambiarIdioma(localizacion);
+        }
     }
 
     /**
@@ -176,6 +216,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemBuscarCantante = new javax.swing.JMenuItem();
         menuItemEliminarCantante = new javax.swing.JMenuItem();
         menuItemListarCantante = new javax.swing.JMenuItem();
+        menuItemBuscaporDisco = new javax.swing.JMenuItem();
         menuItemDisco = new javax.swing.JMenu();
         menuItemAgregarDisco = new javax.swing.JMenuItem();
         menuItemActualizarDisco = new javax.swing.JMenuItem();
@@ -253,6 +294,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         });
         menuCantante.add(menuItemListarCantante);
 
+        menuItemBuscaporDisco.setText("Buscar Por Nombre Disco");
+        menuItemBuscaporDisco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemBuscaporDiscoActionPerformed(evt);
+            }
+        });
+        menuCantante.add(menuItemBuscaporDisco);
+
         menuItemDisco.setText("Disco");
 
         menuItemAgregarDisco.setText("Agregar");
@@ -293,11 +342,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         menuCompositor.setMnemonic('e');
         menuCompositor.setText("Compositor");
-        menuCompositor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuCompositorActionPerformed(evt);
-            }
-        });
 
         menuItemCrearCompositor.setMnemonic('t');
         menuItemCrearCompositor.setText("Crear");
@@ -430,6 +474,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         menuItemSalirMenu.setMnemonic('c');
         menuItemSalirMenu.setText("Salir");
+        menuItemSalirMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItemSalirMenuActionPerformed(evt);
+            }
+        });
         menuOpciones.add(menuItemSalirMenu);
 
         aboutMenuItem.setMnemonic('a');
@@ -601,10 +650,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         eliminarCancion.setVisible(true);
     }//GEN-LAST:event_menuItemEliminarCancionActionPerformed
 
-    private void menuCompositorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCompositorActionPerformed
-         
-    }//GEN-LAST:event_menuCompositorActionPerformed
-
     private void menuItemAgregarCliemtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemAgregarCliemtActionPerformed
         if(agregarCliente == null){
             agregarCliente = new AgregarCliente(controladorCompositor,controladorCantante);
@@ -644,6 +689,18 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         localizacion = new Locale("fr", "FR");
         this.cambiarIdioma();
     }//GEN-LAST:event_menuItemFrancesActionPerformed
+
+    private void menuItemBuscaporDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemBuscaporDiscoActionPerformed
+        if(buscarPorNombreDeDisco== null){
+            buscarPorNombreDeDisco = new BuscarPorNombreDeDisco(controladorCantante);
+            desktopPane.add(buscarPorNombreDeDisco);
+        }
+        buscarPorNombreDeDisco.setVisible(true);
+    }//GEN-LAST:event_menuItemBuscaporDiscoActionPerformed
+
+    private void menuItemSalirMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItemSalirMenuActionPerformed
+        System.exit(0); 
+    }//GEN-LAST:event_menuItemSalirMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -696,6 +753,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuItemAgregarCancion;
     private javax.swing.JMenuItem menuItemAgregarCliemt;
     private javax.swing.JMenuItem menuItemAgregarDisco;
+    private javax.swing.JMenuItem menuItemBuscaporDisco;
     private javax.swing.JMenuItem menuItemBuscarCancion;
     private javax.swing.JMenuItem menuItemBuscarCantante;
     private javax.swing.JMenuItem menuItemBuscarCompositor;
