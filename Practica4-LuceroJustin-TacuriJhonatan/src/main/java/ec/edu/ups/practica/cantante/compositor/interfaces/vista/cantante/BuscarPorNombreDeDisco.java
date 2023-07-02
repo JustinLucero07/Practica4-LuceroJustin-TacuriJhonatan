@@ -8,7 +8,9 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.Controlado
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
+import javax.swing.border.Border;
 
 /**
  *
@@ -41,6 +43,8 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         jblNombreArtisticoBuscarporDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
         btnCancelar.setText(mensajes.getString("boton.cancelar"));
         btnBuscar.setText(mensajes.getString("boton.buscar"));
+        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.buscarpornombrededisco"));
+        jpanelA.setBorder(borde);
     }
     
     /**
@@ -52,7 +56,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jpanelA = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNombreDisco = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
@@ -82,7 +86,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         btnCancelar = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Buscar Por Disco"));
+        jpanelA.setBorder(javax.swing.BorderFactory.createTitledBorder("BUSCAR POR NOMBRE DE DISCO"));
 
         jLabel1.setText("Ingrese el nombre del disco para encontrar al cantante :");
 
@@ -258,11 +262,11 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
                 .addGap(14, 14, 14))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jpanelALayout = new javax.swing.GroupLayout(jpanelA);
+        jpanelA.setLayout(jpanelALayout);
+        jpanelALayout.setHorizontalGroup(
+            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelALayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel1)
                 .addGap(39, 39, 39)
@@ -270,15 +274,15 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(btnBuscar)
                 .addGap(22, 22, 22))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(jpanelALayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jpanelALayout.setVerticalGroup(
+            jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelALayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jpanelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNombreDisco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar))
@@ -293,14 +297,14 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpanelA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(9, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jpanelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -354,7 +358,6 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel jblApellidoBuscarporDisco;
     private javax.swing.JLabel jblEdadBuscarporDisco;
@@ -367,6 +370,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblNumeroGirasBuscarporDisco;
     private javax.swing.JLabel jblNumeroSencillosBuscarporDisco;
     private javax.swing.JLabel jblSalarioBuscarporDisco;
+    private javax.swing.JPanel jpanelA;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtGeneroMusical;

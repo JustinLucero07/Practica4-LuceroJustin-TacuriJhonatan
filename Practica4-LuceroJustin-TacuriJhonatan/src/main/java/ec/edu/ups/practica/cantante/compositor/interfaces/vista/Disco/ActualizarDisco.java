@@ -11,6 +11,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 import javax.swing.border.Border;
 
 /**
@@ -44,9 +45,9 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
         bntCancelar4.setText(mensajes.getString("boton.cancelar"));
-        Border borde = BorderFactory.createTitledBorder(mensajes.getString("menuItem.actualizar"));
+        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.actualizar"));
         panelA.setBorder(borde); 
-
+        
     }
 
     /**
@@ -83,7 +84,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         bntCancelar4 = new javax.swing.JButton();
         bntBuscarDisco = new javax.swing.JButton();
 
-        panelA.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualizar Disco"));
+        panelA.setBorder(javax.swing.BorderFactory.createTitledBorder("ACTUALIZAR DISCO"));
 
         jblIdActualizarDisco.setText("Buscar cantante para encontar disco : ");
 
@@ -324,7 +325,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void bntBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscar4ActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));   
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante4.getText()));
             if (cantanteTempo!=null) {
