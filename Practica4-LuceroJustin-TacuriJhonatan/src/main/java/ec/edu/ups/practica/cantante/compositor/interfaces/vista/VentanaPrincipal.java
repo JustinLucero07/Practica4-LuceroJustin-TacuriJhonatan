@@ -533,6 +533,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             eliminarCantante = new EliminarCantante(controladorCantante);
             desktopPane.add(eliminarCantante);
         }
+        eliminarCantante.cambiarIdioma(localizacion); 
         eliminarCantante.setVisible(true); 
     }//GEN-LAST:event_menuItemEliminarCantanteActionPerformed
 
@@ -541,6 +542,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             crearCompositor = new CrearCompositor(controladorCompositor);
             desktopPane.add(crearCompositor);
         }
+        crearCompositor.cambiarIdioma(localizacion); 
         crearCompositor.setVisible(true); 
     }//GEN-LAST:event_menuItemCrearCompositorActionPerformed
 
@@ -549,6 +551,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             buscarCompositor = new BuscarCompositor(controladorCompositor);
             desktopPane.add(buscarCompositor);
         }
+        buscarCompositor.cambiarIdioma(localizacion); 
         buscarCompositor.setVisible(true); 
     }//GEN-LAST:event_menuItemBuscarCompositorActionPerformed
 
@@ -557,6 +560,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             ventanaCrearCantante = new CrearCantante(controladorCantante);
             desktopPane.add(ventanaCrearCantante);
         }
+        ventanaCrearCantante.cambiarIdioma(localizacion); 
         ventanaCrearCantante.setVisible(true); 
     }//GEN-LAST:event_menuItemCrearCantanteActionPerformed
 
@@ -566,6 +570,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             ventanaBuscarCantante = new BuscarCantante(controladorCantante);
             desktopPane.add(ventanaBuscarCantante);
         }
+        ventanaBuscarCantante.cambiarIdioma(localizacion); 
         ventanaBuscarCantante.setVisible(true); 
     }//GEN-LAST:event_menuItemBuscarCantanteActionPerformed
 
@@ -574,6 +579,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             agregarCancion = new AgregarCancion(controladorCompositor);
             desktopPane.add(agregarCancion);
         }
+        agregarCancion.cambiarIdioma(localizacion); 
         agregarCancion.setVisible(true); 
     }//GEN-LAST:event_menuItemAgregarCancionActionPerformed
 
@@ -583,6 +589,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             actualizarCantante = new ActualizarCantante(controladorCantante);
             desktopPane.add(actualizarCantante);
         }
+        actualizarCantante.cambiarIdioma(localizacion);
         actualizarCantante.setVisible(true); 
         
     }//GEN-LAST:event_menuItemActualizarCantanteActionPerformed
@@ -593,6 +600,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             listarCantante = new ListarCantante(controladorCantante);
             desktopPane.add(listarCantante);
         }
+        listarCantante.cambiarIdioma(localizacion); 
         listarCantante.setVisible(true); 
     }//GEN-LAST:event_menuItemListarCantanteActionPerformed
 
@@ -601,6 +609,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             actualizarCompositor = new ActualizarCompositor(controladorCompositor);
             desktopPane.add(actualizarCompositor);
         }
+        actualizarCompositor.cambiarIdioma(localizacion); 
         actualizarCompositor.setVisible(true); 
     }//GEN-LAST:event_menuItemActualizarCompositorActionPerformed
 
@@ -609,6 +618,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             eliminarCompositor = new EliminarCompositor(controladorCompositor);
             desktopPane.add(eliminarCompositor);
         }
+        eliminarCompositor.cambiarIdioma(localizacion); 
         eliminarCompositor.setVisible(true); 
     }//GEN-LAST:event_menuItemEliminarCompositorActionPerformed
 
@@ -617,6 +627,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             listarCompositor = new ListarCompositor(controladorCompositor);
             desktopPane.add(listarCompositor);
         }
+        listarCompositor.cambiarIdioma(localizacion); 
         listarCompositor.setVisible(true); 
     }//GEN-LAST:event_menuItemListarCompositorActionPerformed
 
@@ -626,6 +637,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             agregarDisco = new AgregarDisco(controladorCantante);
             desktopPane.add(agregarDisco);
         }
+        agregarDisco.cambiarIdioma(localizacion);
         agregarDisco.setVisible(true); 
     }//GEN-LAST:event_menuItemAgregarDiscoActionPerformed
 
@@ -645,6 +657,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             actualizarDisco = new ActualizarDisco(controladorCantante);
             desktopPane.add(actualizarDisco);
         }
+        actualizarDisco.cambiarIdioma(localizacion);
         actualizarDisco.setVisible(true); 
     }//GEN-LAST:event_menuItemActualizarDiscoActionPerformed
 
@@ -653,6 +666,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             buscarCacion = new BuscarCancion(controladorCompositor);
             desktopPane.add(buscarCacion);
         }
+        buscarCacion.cambiarIdioma(localizacion);
         buscarCacion.setVisible(true);
     }//GEN-LAST:event_menuItemBuscarCancionActionPerformed
 
@@ -661,6 +675,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             actualizarCancion = new ActualizarCancion(controladorCompositor);
             desktopPane.add(actualizarCancion);
         }
+        actualizarCancion.cambiarIdioma(localizacion);
         actualizarCancion.setVisible(true);
     }//GEN-LAST:event_menuItemActualizarCancionActionPerformed
 
@@ -669,6 +684,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             eliminarCancion = new EliminarCancion(controladorCompositor);
             desktopPane.add(eliminarCancion);
         }
+        eliminarCancion.cambiarIdioma(localizacion); 
         eliminarCancion.setVisible(true);
     }//GEN-LAST:event_menuItemEliminarCancionActionPerformed
 
@@ -677,6 +693,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             agregarCliente = new AgregarCliente(controladorCompositor,controladorCantante);
             desktopPane.add(agregarCliente);
         }
+        agregarCliente.cambiarIdioma(localizacion);
         agregarCliente.setVisible(true);
     }//GEN-LAST:event_menuItemAgregarCliemtActionPerformed
 
@@ -686,6 +703,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             buscarDisco = new BuscarDisco(controladorCantante);
             desktopPane.add(buscarDisco);
         }
+        buscarDisco.cambiarIdioma(localizacion);
         buscarDisco.setVisible(true);
     }//GEN-LAST:event_menuItemBuscarDiscoActionPerformed
 
@@ -696,6 +714,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             eliminarDisco = new EliminarDisco(controladorCantante);
             desktopPane.add(eliminarDisco);
         }
+        eliminarDisco.cambiarIdioma(localizacion);
         eliminarDisco.setVisible(true);
     }//GEN-LAST:event_menuItemEliminarDiscoActionPerformed
 
@@ -704,6 +723,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             buscarPorTitulo = new BuscarPorTitulo(controladorCompositor);
             desktopPane.add(buscarPorTitulo);
         }
+        buscarPorTitulo.cambiarIdioma(localizacion);
         buscarPorTitulo.setVisible(true);
     }//GEN-LAST:event_menuItemBuscarPorTituloActionPerformed
 
@@ -717,6 +737,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             buscarPorNombreDeDisco = new BuscarPorNombreDeDisco(controladorCantante);
             desktopPane.add(buscarPorNombreDeDisco);
         }
+        buscarPorNombreDeDisco.cambiarIdioma(localizacion); 
         buscarPorNombreDeDisco.setVisible(true);
     }//GEN-LAST:event_menuItemBuscaporDiscoActionPerformed
 
