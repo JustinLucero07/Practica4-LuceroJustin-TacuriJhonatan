@@ -75,13 +75,13 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private ResourceBundle mensajes;
     
     //Imagenes
-    FondoPanel fondopanel = new FondoPanel();
+    //FondoPanel fondopanel = new FondoPanel();
     
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
-        this.setContentPane(fondopanel);
+        //this.setContentPane(fondopanel);
         initComponents();
         cantanteDao = new CantanteDao();
         controladorCantante = new ControladorCantante(cantanteDao) ;
@@ -792,16 +792,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu menuOpciones;
     // End of variables declaration//GEN-END:variables
 
-        class FondoPanel extends JPanel{
-            private Image imagen;
-            @Override   
-            public void paint(Graphics g){
-                imagen = new ImageIcon(getClass().getResource("/imagenes/imagenPricipal.jpg")).getImage();
-                g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-                setOpaque(false);
+        //class FondoPanel extends JPanel{
+            //private Image imagen;
+            //@Override   
+            //public void paint(Graphics g){
+                //imagen = new ImageIcon(getClass().getResource("/imagenes/imagenPricipal.jpg")).getImage();
+                //g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+                /*setOpaque(false);
                 super.paint(g);
             }
-        }
+        }*/
     
         
 }
