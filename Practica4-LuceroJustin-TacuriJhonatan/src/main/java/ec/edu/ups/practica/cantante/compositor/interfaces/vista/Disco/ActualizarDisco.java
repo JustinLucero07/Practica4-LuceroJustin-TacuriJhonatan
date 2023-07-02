@@ -9,7 +9,9 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Disco;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
+import javax.swing.border.Border;
 
 /**
  *
@@ -41,7 +43,10 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         bntActualizar.setText(mensajes.getString("boton.actualizar"));
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
-        bntCancelar4.setText(mensajes.getString("boton.cancelar")); 
+        bntCancelar4.setText(mensajes.getString("boton.cancelar"));
+        Border borde = BorderFactory.createTitledBorder(mensajes.getString("menuItem.actualizar"));
+        panelA.setBorder(borde); 
+
     }
 
     /**
@@ -54,7 +59,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        panelA = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jblIdActualizarDisco = new javax.swing.JLabel();
         txtIdCantante4 = new javax.swing.JTextField();
@@ -78,7 +83,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         bntCancelar4 = new javax.swing.JButton();
         bntBuscarDisco = new javax.swing.JButton();
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualizar Disco"));
+        panelA.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualizar Disco"));
 
         jblIdActualizarDisco.setText("Buscar cantante para encontar disco : ");
 
@@ -262,18 +267,18 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                 .addGap(16, 16, 16))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelALayout = new javax.swing.GroupLayout(panelA);
+        panelA.setLayout(panelALayout);
+        panelALayout.setHorizontalGroup(
+            panelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelALayout.createSequentialGroup()
                 .addGap(51, 51, 51)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(167, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        panelALayout.setVerticalGroup(
+            panelALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelALayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(52, Short.MAX_VALUE))
@@ -285,14 +290,14 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -431,7 +436,6 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JButton bntCancelar4;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JLabel jblAnioLanzaminietoActualizarDisco;
     private javax.swing.JLabel jblApellidoActualizarDisco;
@@ -441,6 +445,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jblNombreActualizarDisco;
     private javax.swing.JLabel jblNombreArtisticoActualizarDisco;
     private javax.swing.JLabel jblNombreDiscoActualizarDisco;
+    private javax.swing.JPanel panelA;
     private javax.swing.JTextField txtAnioLanzamiento4;
     private javax.swing.JTextField txtApellido4;
     private javax.swing.JTextField txtCodigo4;
