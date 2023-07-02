@@ -325,7 +325,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void bntBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscar4ActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));   
+            JOptionPane.showMessageDialog(this, "NO esta lleno el campo del ID");   
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante4.getText()));
             if (cantanteTempo!=null) {
