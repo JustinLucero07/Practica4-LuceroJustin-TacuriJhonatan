@@ -329,10 +329,21 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         }else{
             cantanteTempo = controladorCantante.buscarporDisco(txtNombreDisco.getText());
             if (cantanteTempo!=null) {
-                
+                txtID.setText(String.valueOf(cantanteTempo.getCodigo()));
+                txtNombre.setText(cantanteTempo.getNombre());
+            txtApellido.setText(cantanteTempo.getApellido());
+            txtEdad.setText(String.valueOf(cantanteTempo.getEdad()));
+            txtNacionalidad.setText(cantanteTempo.getNacionalidad());
+            txtSalario.setText(cantanteTempo.getNombreArtistico());
+            txtNombreArtistico.setText(cantanteTempo.getNombreArtistico());
+            txtNumeroConciertos.setText(String.valueOf(cantanteTempo.getNumeroDeConciertos()));
+            txtNumeroSencillos.setText(String.valueOf(cantanteTempo.getNumeroDeSencillos()));
+            txtNumeroGiras.setText(String.valueOf(cantanteTempo.getNumeroDeGiras()));
+            txtGeneroMusical.setText(cantanteTempo.getGeneroMusical()); 
             }else{
-                JOptionPane.showConfirmDialog(this, "El nombre de la cancion no existe en ningun cantante ");
+                JOptionPane.showMessageDialog(this, "El nombre de la cancion no existe en ningun cantante ");
                 this.limpiarCampos();
+                txtID.setText("");
             }
         }
     }//GEN-LAST:event_btnBuscarActionPerformed
