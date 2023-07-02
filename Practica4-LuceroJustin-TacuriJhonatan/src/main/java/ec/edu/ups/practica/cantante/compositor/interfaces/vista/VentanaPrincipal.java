@@ -31,8 +31,12 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.Busca
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.CrearCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.EliminarCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.ListarCompositor;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
@@ -70,10 +74,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private Locale localizacion;
     private ResourceBundle mensajes;
     
+    //Imagenes
+    FondoPanel fondopanel = new FondoPanel();
+    
     /**
      * Creates new form VentanaPrincipal
      */
     public VentanaPrincipal() {
+        this.setContentPane(fondopanel);
         initComponents();
         cantanteDao = new CantanteDao();
         controladorCantante = new ControladorCantante(cantanteDao) ;
@@ -120,7 +128,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         menuItemEspanol.setText(mensajes.getString("menuItem.espanol"));
         menuItemIngles.setText(mensajes.getString("menuItem.ingles"));
         menuItemFrances.setText(mensajes.getString("menuItem.frances"));
-        menuItemBuscaporDisco.setText(mensajes.getString("menuItemBuscarPorNombreDeDisco.buscarPorNombreDisco")); 
+        //menuItemBuscaporDisco.setText(mensajes.getString("menuItemBuscarPorNombreDeDisco.buscarPorNombreDisco")); 
         if(crearCompositor != null){
             crearCompositor.cambiarIdioma(localizacion);
         }
@@ -784,4 +792,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu menuOpciones;
     // End of variables declaration//GEN-END:variables
 
+        class FondoPanel extends JPanel{
+            private Image imagen;
+            @Override   
+            public void paint(Graphics g){
+                imagen = new ImageIcon(getClass().getResource("/imagenes/imagenPricipal.jpg")).getImage();
+                g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+                setOpaque(false);
+                super.paint(g);
+            }
+        }
+    
+        
 }
