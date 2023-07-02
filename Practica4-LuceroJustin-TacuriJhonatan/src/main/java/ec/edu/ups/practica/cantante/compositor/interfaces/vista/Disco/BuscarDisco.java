@@ -269,7 +269,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
     private void bntBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscar4ActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante4.getText()));
             if (cantanteTempo!=null) {
@@ -283,7 +283,7 @@ public class BuscarDisco extends javax.swing.JInternalFrame {
                 txtCodigo4.setEnabled(true);
 
             }else{
-                JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante4.getText()+" en cantantes. ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste"));
             }
         }
     }//GEN-LAST:event_bntBuscar4ActionPerformed

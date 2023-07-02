@@ -286,7 +286,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
     private void bntBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscar4ActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante4.getText()));
             if (cantanteTempo!=null) {
@@ -297,7 +297,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
                 txtCodigo4.setEnabled(true);
 
             }else{
-                JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante4.getText()+" en cantantes. ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste"));
             }
         }
     }//GEN-LAST:event_bntBuscar4ActionPerformed
@@ -349,7 +349,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
     private void bntBuscarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarDiscoActionPerformed
         // TODO add your handling code here:
         if (txtCodigo4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestallenocodigo"));
         }else {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
@@ -359,7 +359,7 @@ public class EliminarDisco extends javax.swing.JInternalFrame {
             }else{
                 txtAnioLanzamiento4.setText("");
                 txtNombreDisco4.setText("");
-                JOptionPane.showMessageDialog(this, "No se encuentra el disco el disco ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseencontroeldisco")); 
                 bntEliminar.setEnabled(false);
             }
         }

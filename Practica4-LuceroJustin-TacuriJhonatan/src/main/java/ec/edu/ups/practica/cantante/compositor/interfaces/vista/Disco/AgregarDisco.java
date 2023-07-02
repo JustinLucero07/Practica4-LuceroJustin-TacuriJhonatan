@@ -274,7 +274,7 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
     private void bntBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante.getText()));
             if (cantanteTempo!=null) {
@@ -287,14 +287,14 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
                 txtAnioLanzamiento.setEnabled(true);
                 
             }else{
-                JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante.getText()+" en cantantes. ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste"));
             }
         }
     }//GEN-LAST:event_bntBuscarActionPerformed
 
     private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
         if (txtAnioLanzamiento.getText().isEmpty()||txtNombreDisco.getText().isEmpty()||txtCodigo.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No se a llenado todos los campos correctamente");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.nosehanllenado")); 
         }else{
             int codigo = Integer.parseInt( txtCodigo.getText());
             if (cantanteTempo.buscarDisco(codigo)==null) {
@@ -302,13 +302,13 @@ public class AgregarDisco extends javax.swing.JInternalFrame {
                 int anio = Integer.parseInt( txtAnioLanzamiento.getText());
                 Disco disco = new Disco(codigo, nombre, anio);
                 cantanteTempo.agregarDisco(disco);
-                JOptionPane.showMessageDialog(this, "Se a creado existosamente");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.seacreado")); 
                 txtNombreDisco.setText("");
                 txtCodigo.setText("");
                 txtAnioLanzamiento.setText("");
                 System.out.println(cantanteTempo);
         }else{
-            JOptionPane.showMessageDialog(this, "El id ya existe");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.elid")); 
         }
         }
     }//GEN-LAST:event_bntAgregarActionPerformed

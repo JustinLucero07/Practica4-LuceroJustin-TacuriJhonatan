@@ -45,7 +45,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
         bntBuscar4.setText(mensajes.getString("boton.buscar"));
         bntBuscarDisco.setText(mensajes.getString("boton.buscar"));
         bntCancelar4.setText(mensajes.getString("boton.cancelar"));
-        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.actualizar"));
+        Border borde = BorderFactory.createTitledBorder(mensajes.getString("panel.actualizardisco"));
         panelA.setBorder(borde); 
         
     }
@@ -325,7 +325,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void bntBuscar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscar4ActionPerformed
         // TODO add your handling code here:
         if (txtIdCantante4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "NO esta lleno el campo del ID");   
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestalleno"));    
         }else{
             cantanteTempo = controladorCantante.buscarCantante(Integer.parseInt(txtIdCantante4.getText()));
             if (cantanteTempo!=null) {
@@ -339,7 +339,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                 txtCodigo4.setEnabled(true);
 
             }else{
-                JOptionPane.showMessageDialog(this, "No existe "+ txtIdCantante4.getText()+" en cantantes. ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noexiste")); 
             }
         }
     }//GEN-LAST:event_bntBuscar4ActionPerformed
@@ -359,11 +359,11 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void bntActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntActualizarActionPerformed
         
         if (txtAnioLanzamiento4.getText().isEmpty()||txtNombreDisco4.getText().isEmpty()||txtCodigo4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No se a llenado todos los campos correctamente");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.nosehanllenado")); 
         }else{
             Disco disquito = new Disco(Integer.parseInt(txtCodigo4.getText()), txtNombreDisco4.getText(), Integer.parseInt(txtAnioLanzamiento4.getText()));
             cantanteTempo.actualizarDisco(disquito);
-            JOptionPane.showMessageDialog(this, "Se actualizado correctamente");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.seactualizo")); 
             txtNombreDisco4.setText("");
             txtAnioLanzamiento4.setText("");
             txtCodigo4.setText("");
@@ -412,7 +412,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
     private void bntBuscarDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntBuscarDiscoActionPerformed
        // TODO add your handling code here:
         if (txtCodigo4.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(this, "No esta lleno el campo ");
+            JOptionPane.showMessageDialog(this, mensajes.getString("joption.noestallenocodigo")); 
         }else {
             disco = cantanteTempo.buscarDisco(Integer.parseInt(txtCodigo4.getText()));
             if (disco!=null) {
@@ -424,7 +424,7 @@ public class ActualizarDisco extends javax.swing.JInternalFrame {
                 txtNombreDisco4.setText(disco.getNombre());
                 bntBuscarDisco.setEnabled(false);
             }else{
-                JOptionPane.showMessageDialog(this, "Nose el disco ");
+                JOptionPane.showMessageDialog(this, mensajes.getString("joption.noseencontroeldisco")); 
             }
         }
     }//GEN-LAST:event_bntBuscarDiscoActionPerformed
