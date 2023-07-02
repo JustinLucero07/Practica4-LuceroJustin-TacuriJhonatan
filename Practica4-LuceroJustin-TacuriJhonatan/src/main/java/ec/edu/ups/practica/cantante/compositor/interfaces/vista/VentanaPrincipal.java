@@ -31,12 +31,12 @@ import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.Busca
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.CrearCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.EliminarCompositor;
 import ec.edu.ups.practica.cantante.compositor.interfaces.vista.compositor.ListarCompositor;
-import java.awt.Graphics;
-import java.awt.Image;
+//import java.awt.Graphics;
+//import java.awt.Image;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+//import javax.swing.ImageIcon;
+//import javax.swing.JPanel;
 
 /**
  *
