@@ -17,7 +17,7 @@ import java.util.List;
  * @author Usuario
  */
 public class CantanteDao implements ICantanteDao {
-    //nov
+    //novaa
     
     private List<Cantante> listaCantantes;
 
