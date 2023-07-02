@@ -34,6 +34,8 @@ public class CrearCompositor extends javax.swing.JInternalFrame {
         jblSalarioCrearCompositor.setText(mensajes.getString("ventana.salario"));
         jblNacionalidadCrearCompositor.setText(mensajes.getString("ventana.nacionalidad"));
         jblNumeroComposicionesCrearCompositor.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnAceptar.setText(mensajes.getString("boton.aceptar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

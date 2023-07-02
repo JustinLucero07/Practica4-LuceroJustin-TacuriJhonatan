@@ -39,7 +39,8 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         jblNumeroGirasBuscarporDisco.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosBuscarporDisco.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArtisticoBuscarporDisco.setText(mensajes.getString("ventanaCantante.nombreartistico"));
-        
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        btnBuscar.setText(mensajes.getString("boton.buscar"));
     }
     
     /**
@@ -54,7 +55,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNombreDisco = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jblIdBuscarporDisco = new javax.swing.JLabel();
         jblNombreBuscarporDisco = new javax.swing.JLabel();
@@ -85,10 +86,10 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Ingrese el nombre del disco para encontrar al cantante :");
 
-        jButton1.setText("Buscar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnBuscarActionPerformed(evt);
             }
         });
 
@@ -267,7 +268,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
                 .addGap(39, 39, 39)
                 .addComponent(txtNombreDisco, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btnBuscar)
                 .addGap(22, 22, 22))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -280,7 +281,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtNombreDisco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(btnBuscar))
                 .addGap(29, 29, 29)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -317,7 +318,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your handling code here:
         if (txtNombreDisco.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "El campo esta vacion");
@@ -330,7 +331,7 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
                 this.limpiarCampos();
             }
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void limpiarCampos(){
         
@@ -349,8 +350,8 @@ public class BuscarPorNombreDeDisco extends javax.swing.JInternalFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JPanel jPanel1;

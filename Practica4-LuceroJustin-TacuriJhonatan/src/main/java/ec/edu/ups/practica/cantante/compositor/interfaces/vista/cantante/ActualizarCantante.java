@@ -42,6 +42,9 @@ public class ActualizarCantante extends javax.swing.JInternalFrame {
         jblNumeroGiras.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosActualizarCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArtisticoActualizarCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        bntActualizar.setText(mensajes.getString("boton.actualizar"));
+        bntBuscar.setText(mensajes.getString("boton.buscar")); 
         
     }
 

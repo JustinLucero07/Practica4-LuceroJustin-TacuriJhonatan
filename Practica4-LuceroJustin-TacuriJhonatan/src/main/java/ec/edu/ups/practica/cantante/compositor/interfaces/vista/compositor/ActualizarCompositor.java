@@ -34,6 +34,9 @@ public class ActualizarCompositor extends javax.swing.JInternalFrame {
         jblSalarioActualizarCompositor.setText(mensajes.getString("ventana.salario"));
         jblNacionalidadActualizarCompositor.setText(mensajes.getString("ventana.nacionalidad"));
         jblNumeroComposiciones.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnActualizarCompositor.setText(mensajes.getString("boton.actualizar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

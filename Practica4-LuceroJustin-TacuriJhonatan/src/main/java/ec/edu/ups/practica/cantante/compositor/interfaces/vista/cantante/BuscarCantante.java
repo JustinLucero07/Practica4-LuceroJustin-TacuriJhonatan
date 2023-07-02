@@ -38,7 +38,8 @@ public class BuscarCantante extends javax.swing.JInternalFrame {
         jblNumeroGirasBuscarCantante.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosBuscarCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArtisticoBuscarCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
-        
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        bntAceptar.setText(mensajes.getString("boton.aceptar"));
     }
     
     /**

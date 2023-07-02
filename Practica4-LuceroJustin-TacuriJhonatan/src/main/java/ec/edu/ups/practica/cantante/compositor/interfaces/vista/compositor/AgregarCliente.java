@@ -51,7 +51,10 @@ public class AgregarCliente extends javax.swing.JInternalFrame {
         jblNumeroGirasAgregarCliente.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosAgregarCliente.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArtisticoAgregarCliente.setText(mensajes.getString("ventanaCantante.nombreartistico"));
-        
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        bntAceptar.setText(mensajes.getString("boton.buscar"));
+        btnAgregarCliente.setText(mensajes.getString("boton.aceptar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

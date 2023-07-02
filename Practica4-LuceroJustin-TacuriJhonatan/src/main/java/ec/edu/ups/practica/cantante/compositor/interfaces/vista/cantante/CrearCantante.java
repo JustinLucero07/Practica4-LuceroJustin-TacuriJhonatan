@@ -39,7 +39,8 @@ public class CrearCantante extends javax.swing.JInternalFrame {
         jblNumeroGirasCrearCantante.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosCrearCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArCrearCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
-        
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        btnCrearCantante.setText(mensajes.getString("boton.aceptar"));
     }
     
     /**

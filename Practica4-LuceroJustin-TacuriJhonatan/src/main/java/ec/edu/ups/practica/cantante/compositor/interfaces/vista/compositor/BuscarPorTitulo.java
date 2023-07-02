@@ -34,6 +34,8 @@ public class BuscarPorTitulo extends javax.swing.JInternalFrame {
         jblSalarioBuscarPorTitulo.setText(mensajes.getString("ventana.salario"));
         jblNacionalidadBuscarPorTitulo.setText(mensajes.getString("ventana.nacionalidad"));
         jblNumeroComposicionesBuscarPorTitulo.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

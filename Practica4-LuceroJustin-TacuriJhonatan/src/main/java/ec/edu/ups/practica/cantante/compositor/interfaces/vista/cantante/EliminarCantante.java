@@ -39,6 +39,9 @@ public class EliminarCantante extends javax.swing.JInternalFrame {
         jblNumeroGirasEliminarCantante.setText(mensajes.getString("ventanaCantante.numerogiras"));
         jblNumeroSencillosEliminarCantante.setText(mensajes.getString("ventanaCantante.numerosencillos"));
         jblNombreArEliminarCantante.setText(mensajes.getString("ventanaCantante.nombreartistico"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
+        bntBuscarr.setText(mensajes.getString("boton.buscar"));
+        bntEliminar.setText(mensajes.getString("boton.eliminar"));
         
     }
 

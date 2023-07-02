@@ -35,6 +35,8 @@ public class BuscarCompositor extends javax.swing.JInternalFrame {
         jblSalarioBuscarCompositor.setText(mensajes.getString("ventana.salario"));
         jblNacionalidadBuscarCompositor.setText(mensajes.getString("ventana.nacionalidad"));
         jblNumeroComposiconesBuscarCompositor.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**

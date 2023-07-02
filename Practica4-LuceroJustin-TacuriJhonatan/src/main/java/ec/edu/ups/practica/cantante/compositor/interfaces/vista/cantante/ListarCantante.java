@@ -7,6 +7,8 @@ package ec.edu.ups.practica.cantante.compositor.interfaces.vista.cantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.controlador.ControladorCantante;
 import ec.edu.ups.practica.cantante.compositor.interfaces.modelo.Cantante;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,6 +18,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ListarCantante extends javax.swing.JInternalFrame {
     private ControladorCantante controladorCantante;
+    private ResourceBundle mensajes;
     /**
      * Creates new form ListarCantante
      */
@@ -24,6 +27,12 @@ public class ListarCantante extends javax.swing.JInternalFrame {
         this.controladorCantante = controladorCantante;
     }
 
+    public void cambiarIdioma(Locale localizacion){
+        mensajes = ResourceBundle.getBundle("mensajes.mensaje", localizacion);
+        bntSalir.setText(mensajes.getString("boton.salir"));
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

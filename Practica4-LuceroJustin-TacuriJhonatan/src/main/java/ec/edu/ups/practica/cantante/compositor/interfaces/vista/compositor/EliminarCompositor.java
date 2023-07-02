@@ -34,6 +34,9 @@ public class EliminarCompositor extends javax.swing.JInternalFrame {
         jblSalarioEliminarCompositor.setText(mensajes.getString("ventana.salario"));
         jblNacionalidadEliminarCompositor.setText(mensajes.getString("ventana.nacionalidad"));
         jblNumeroComposicionesEliminarCompositor.setText(mensajes.getString("ventanaCompositor.numerocomposiciones"));
+        btnAceptar.setText(mensajes.getString("boton.buscar"));
+        btnEliminarCompositor.setText(mensajes.getString("boton.eliminar"));
+        btnCancelar.setText(mensajes.getString("boton.cancelar"));
     }
     
     /**
